@@ -21,6 +21,10 @@ export default class AuthAPI extends BaseAPI {
     resetPass(email: string) {
         return this.axios.post('/me/reset-notify', {email})
     }
+
+    fetchProfile() {
+        return this.axios.get('/me/profile')
+    }
 }
 
 export const authAPI = new AuthAPI()

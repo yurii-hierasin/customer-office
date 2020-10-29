@@ -2,12 +2,14 @@ import {
     FORGOT_PASS_REQUEST,
     IAuthActionTypes,
     ISignInRequest,
-    SIGN_UP_REQUEST,
-    SIGN_UP_SUCCESS,
+    PROFILE_REQUEST,
+    PROFILE_SUCCESS,
     SIGN_IN_REQUEST,
-    SIGN_IN_SUCCESS
+    SIGN_IN_SUCCESS,
+    SIGN_UP_REQUEST,
+    SIGN_UP_SUCCESS
 } from './types';
-import {ISignInData, ISignUpData, IUser} from '../../interfaces/signUp';
+import {IProfile, ISignInData, ISignUpData, IUser} from '../../interfaces/signUp';
 
 export const requestSignUp = (data: ISignUpData): IAuthActionTypes => ({
     type: SIGN_UP_REQUEST,
@@ -32,4 +34,14 @@ export const responseSignIn = (user: IUser): IAuthActionTypes => ({
 export const requestForgotPassword = (email: string): IAuthActionTypes => ({
     type: FORGOT_PASS_REQUEST,
     email
+})
+
+export const requestProfile = (): IAuthActionTypes => ({
+    type: PROFILE_REQUEST,
+    payload: null,
+})
+
+export const responseProfile = (profile: IProfile): IAuthActionTypes => ({
+    type: PROFILE_SUCCESS,
+    payload: profile,
 })

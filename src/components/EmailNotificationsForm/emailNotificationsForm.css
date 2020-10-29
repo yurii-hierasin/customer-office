@@ -1,0 +1,10 @@
+.remove-email-icon {
+    transform: rotate(45deg);
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    margin-top: 6px;
+}
+.form-control.is-valid, .was-validated #notification-mode:valid {
+    background-image: none;
+}

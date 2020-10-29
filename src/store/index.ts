@@ -7,7 +7,7 @@ import authReducer from './auth/reduces';
 import uiReducer from './ui/reducers';
 
 import {watchTranslationsRequest} from './app/sagas';
-import {watchRequestForgotPass, watchRequestSignIn, watchRequestSingUp} from './auth/sagas';
+import {watchRequestForgotPass, watchRequestProfile, watchRequestSignIn, watchRequestSingUp} from './auth/sagas';
 import {IApi} from '../interfaces/app';
 
 
@@ -24,6 +24,7 @@ function* rootSaga(api: IApi) {
         watchRequestSingUp(api),
         watchRequestSignIn(api),
         watchRequestForgotPass(api),
+        watchRequestProfile(api),
         watchTranslationsRequest(api)
     ])
 }

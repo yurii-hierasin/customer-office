@@ -3,6 +3,10 @@ import {useDispatch, useSelector} from 'react-redux';
 import {requestTranslations} from '../store/app/actions';
 import {useL10n} from '../hooks/useL10n';
 import {RootState} from '../store';
+import {ChangePasswordForm} from '../components/auth/ChangePasswordForm';
+import ProfileDetailsForm from '../components/auth/ProfileDetailsForm';
+import EmailNotificationsForm from '../components/EmailNotificationsForm/EmailNotificationsForm';
+import {requestProfile} from '../store/auth/actions';
 
 const Account: React.FC = () => {
     const dispatch = useDispatch()
@@ -18,21 +22,46 @@ const Account: React.FC = () => {
         dispatch(requestTranslations(locale))
     }, [dispatch, locale])
 
+    useEffect(() => {
+        dispatch(requestProfile())
+    }, [])
+
     return (
         <>
-            <div className="page-account-details">
-                <div className="account-img-block shadow-ellipse-container">
-                    <div className="shadow-ellipse-container__shadow">
-                        <div className="shadow-ellipse-container__bottom_ellipse">
-                            <div className="container collision_top">
-                                <h1>{t.get('your_account')}</h1>
-                                <p className="account-img-block__id">ID {user?.account_number}</p>
-                                <p>First name: {user?.first_name}</p>
-                                <p>Last name: {user?.last_name}</p>
+            <div className="container mt-3">
+                <h1>{t.get('your_account')}</h1>
+                <h3>ID: {user?.account_number}</h3>
+                <div className="row mt-3">
+                    <div className="col-md-6 col-sm-12">
+                        <div className="card">
+                            <div className="card-body">
+                                <h3>{t.get('profile_details')}</h3>
+                                <small>{t.get('account_details_tell_us')}</small>
+                                <ProfileDetailsForm/>
                             </div>
                         </div>
                     </div>
+                    <div className="col-md-6 col-sm-12">
+                        <div className="row">
+                            <div className="card col">
+                                <div className="card-body">
+                                    <h3>{t.get('email_notifications')}</h3>
+                                    <EmailNotificationsForm/>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="row mt-3">
+                            <div className="card col">
+                                <div className="card-body">
+                                    <h3>{t.get('change_password_capitalize')}</h3>
+                                    <ChangePasswordForm/>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
+
             </div>
         </>
     )

@@ -8,6 +8,7 @@ export interface IRootState {
 
 export interface IAuthState {
     user: null | IUser
+    profile: null | IProfile
 }
 
 export interface IAuthSession {
@@ -28,7 +29,7 @@ export interface ISignUpData {
     firstName?: string
     lastName?: string
     email?: string
-    password?: string
+    password: string
 }
 
 export interface ISignInData {
@@ -46,6 +47,25 @@ export interface IForgotPassData {
             reject_reason: string
         }
     ]
+}
+
+export interface IProfile {
+    id: number,
+    account_number: number,
+    first_name: string
+    last_name: string
+    emails: [
+        {
+            email: string
+            is_contact: boolean
+            is_primary: boolean
+        }
+    ],
+    settings: {
+        privateInfoStorage: "no_storage",
+        stopProcessing: boolean
+    },
+    created: string
 }
 
 interface ILoaderAction {
