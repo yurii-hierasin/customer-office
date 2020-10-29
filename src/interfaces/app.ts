@@ -38,6 +38,7 @@ export interface IApi {
 export enum RoutesEnum {
     HOME = '/',
     PROFILE = '/profile',
+    ORDERS = '/orders',
     SIGN_IN = '/sign-in',
     SIGN_UP = '/sign-up',
 }

@@ -77,7 +77,7 @@ const EmailNotificationsForm = () => {
                 </select>
             </div>
 
-            <a href="#" title="Placeholder link title" className="text-decoration-none" onClick={handleClick}>
+            <a href="/" title="Placeholder link title" className="text-decoration-none" onClick={handleClick}>
                 <svg width="1em" height="1em" viewBox="0 0 16 16"
                      className="bi bi-plus-circle mb-1" fill="currentColor"
                      xmlns="http://www.w3.org/2000/svg">

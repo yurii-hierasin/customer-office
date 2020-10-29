@@ -24,7 +24,7 @@ const Account: React.FC = () => {
 
     useEffect(() => {
         dispatch(requestProfile())
-    }, [])
+    }, [dispatch])
 
     return (
         <>

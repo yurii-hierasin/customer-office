@@ -1,6 +1,5 @@
 import React, {useRef, useState} from 'react';
 import {PasswordField} from './PasswordField';
-import {requestSignUp} from '../../store/auth/actions';
 
 export const ChangePasswordForm = () => {
     const [isValid, setValid] = useState(false)
