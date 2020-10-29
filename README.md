@@ -1,3 +1,9 @@
+# Customer office side
+
+Give to the customer register, log in, reset the password,<br />
+change his data on the account page (name, email, change<br />
+password) and see the orders list. Actual app state: in development.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

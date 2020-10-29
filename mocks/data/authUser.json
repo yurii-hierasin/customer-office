@@ -1,0 +1,11 @@
+{
+  "token": "MiEJTmmRwjUHnLqW",
+  "expired": "2020-06-08T15:19:37.021Z",
+  "user": {
+    "id": 222849,
+    "account_number": 219547,
+    "created": "2020-05-25T15:19:37.010411Z",
+    "first_name": "John",
+    "last_name": "Smith"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": 222849,
+  "account_number": 219547,
+  "first_name": "Tets",
+  "last_name": "Test [Test]",
+  "emails": [
+    {
+      "email": "nhlmeiy7zw@test.com",
+      "is_contact": true,
+      "is_primary": true
+    }
+  ],
+  "settings": {
+    "privateInfoStorage": "no_storage",
+    "stopProcessing": false
+  },
+  "created": "2020-05-25T15:19:37.010411Z"
+}
