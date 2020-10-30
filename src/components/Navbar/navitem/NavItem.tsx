@@ -1,7 +1,6 @@
 import React from 'react';
 import {Link, useLocation} from 'react-router-dom';
-import {useSelector} from 'react-redux';
-import {RootState} from '../../../store';
+import {withIsAuth} from '../../../hoc/withIsAuth';
 
 interface INavItem {
     routeSettings: {
@@ -31,12 +30,6 @@ const NavItem = ({ isActive, isAuth, routeSettings }: INavItem) => {
             </Link>
         </li>
     )
-}
-
-const withIsAuth = (Component: React.ComponentType) => (props: any) => {
-    const isAuth = useSelector((state: RootState) => !!state.auth.user?.id)
-
-    return <Component {...props} isAuth={isAuth}/>
 }
 
 // this is madness, need found better TS way
