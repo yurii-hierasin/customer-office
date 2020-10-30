@@ -2,16 +2,19 @@ import React from 'react';
 
 const orders = [
     {
+        id: 10001,
         price: 150.00,
         destination: 'Chad',
         applicant: 'John Doe',
     },
     {
+        id: 10002,
         price: 100.00,
         destination: 'Kenya',
         applicant: 'John Doe',
     },
     {
+        id: 10003,
         price: 35.00,
         destination: 'Australia',
         applicant: 'John Doe',
@@ -26,7 +29,7 @@ const Orders = () => {
 
             {orders.map(order => {
                 return (
-                    <div className="card mt-3">
+                    <div className="card mt-3" key={order.id}>
                         <div className="card-body">
                             <div className="row">
                                 <div className="col-10">

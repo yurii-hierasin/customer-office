@@ -6,14 +6,17 @@ const routes = [
     {
         to: '/',
         label: 'Home',
+        isAuth: false,
     },
     {
         to: RoutesEnum.PROFILE,
         label: 'Profile',
+        isAuth: true,
     },
     {
         to: RoutesEnum.ORDERS,
         label: 'Orders',
+        isAuth: true,
     },
 ]
 
@@ -27,7 +30,7 @@ const Navbar = () => {
             </button>
             <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav">
-                    {routes.map(route => <NavItem to={route.to} label={route.label} key={route.to}/>)}
+                    {routes.map(route => <NavItem routeSettings={route} key={route.to}/>)}
                 </ul>
             </div>
         </nav>
