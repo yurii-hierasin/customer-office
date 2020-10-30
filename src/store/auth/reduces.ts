@@ -1,4 +1,4 @@
-import {IAuthActionTypes, PROFILE_SUCCESS, SIGN_IN_SUCCESS, SIGN_UP_SUCCESS} from './types';
+import {IAuthActionTypes, LOGOUT, PROFILE_SUCCESS, SIGN_IN_SUCCESS, SIGN_UP_SUCCESS} from './types';
 import {IAuthState} from '../../interfaces/signUp';
 
 const authInitState = {
@@ -13,6 +13,8 @@ export default function authReducer(state: IAuthState = authInitState, action: I
             return {...state, user: action.user}
         case PROFILE_SUCCESS:
             return {...state, profile: action.payload}
+        case LOGOUT:
+            return {...state, user: action.payload, profile: action.payload}
         default:
             return state;
     }

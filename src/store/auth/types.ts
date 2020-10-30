@@ -10,6 +10,7 @@ export const PROFILE_REQUEST = 'AUTH/PROFILE_REQUEST'
 export const PROFILE_SUCCESS = 'AUTH/PROFILE_SUCCESS'
 
 export const FORGOT_PASS_REQUEST = 'FORGOT_PASS_REQUEST'
+export const LOGOUT = 'AUTH/LOGOUT'
 
 export interface ISignUpRequest {
     type: typeof SIGN_UP_REQUEST
@@ -46,10 +47,16 @@ export interface IProfileResponse {
     payload: IProfile
 }
 
+export interface ILogout {
+    type: typeof LOGOUT
+    payload: null
+}
+
 export type IAuthActionTypes = ISignUpRequest
     | ISignUpResponse
     | ISignInRequest
     | ISignInResponse
     | IProfileRequest
     | IProfileResponse
+    | ILogout
     | IForgotPassRequest

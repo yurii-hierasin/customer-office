@@ -2,6 +2,7 @@ import {
     FORGOT_PASS_REQUEST,
     IAuthActionTypes,
     ISignInRequest,
+    LOGOUT,
     PROFILE_REQUEST,
     PROFILE_SUCCESS,
     SIGN_IN_REQUEST,
@@ -44,4 +45,9 @@ export const requestProfile = (): IAuthActionTypes => ({
 export const responseProfile = (profile: IProfile): IAuthActionTypes => ({
     type: PROFILE_SUCCESS,
     payload: profile,
+})
+
+export const logout = (): IAuthActionTypes => ({
+    type: LOGOUT,
+    payload: null
 })

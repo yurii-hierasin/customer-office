@@ -1,0 +1,6 @@
+.logout {
+    cursor: pointer;
+}
+.logout:hover {
+    color: rgba(255,255,255,.75);
+}

@@ -9,11 +9,13 @@ import Account from '../pages/Account';
 import RestrictRoute from './RestrictRoute';
 import {RoutesEnum} from '../interfaces/app';
 import Orders from '../pages/Orders';
+import About from '../pages/About';
 
 const Routes: React.FC = () => {
     return (
         <Switch>
             <Route component={SignUp} path={RoutesEnum.HOME} exact />
+            <Route component={About} path={RoutesEnum.ABOUT} exact />
             <RestrictRoute component={SignIn} path={RoutesEnum.SIGN_IN} exact />
             <RestrictRoute component={SignUp} path={RoutesEnum.SIGN_UP} exact />
             <RestrictRoute component={Account} path={RoutesEnum.PROFILE} exact />
