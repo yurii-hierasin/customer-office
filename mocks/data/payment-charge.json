@@ -1,0 +1,104 @@
+{
+  "id": 1561,
+  "invoice": "DE270720",
+  "user_id": "67657",
+  "status": "paid",
+  "created": "2018-08-27T11:52:50.807+00:00",
+  "updated": "2018-08-27T11:52:50.807+00:00",
+  "total": 1,
+  "service_list": [
+    {
+      "id": 1756,
+      "order_id": 1561,
+      "currency": {
+        "code": "EUR",
+        "numeric": "978",
+        "label": "Euro"
+      },
+      "total": 1,
+      "created": "2018-08-27T11:52:50.826+00:00",
+      "updated": "2018-08-27T11:52:50.826+00:00",
+      "status": "pending",
+      "cost_list": {
+        "keys": {
+          "proc_time": {
+            "id": 1,
+            "name": "Next business day",
+            "days_count": 1
+          },
+          "visa_type": null
+        },
+        "fields": [
+          {
+            "id": "0",
+            "value": 1,
+            "label": "Service fee"
+          }
+        ]
+      },
+      "service": {
+        "id": 26,
+        "label": "Business Letter Generator Service",
+        "keys": [
+          "destination"
+        ],
+        "prices": {
+          "keys": [
+            "proc_time"
+          ],
+          "fields": [
+            {
+              "id": 0,
+              "label": "Service fee",
+              "is_taxed": true
+            }
+          ]
+        }
+      },
+      "service_item": {
+        "id": 387760,
+        "service_id": 26,
+        "destination": "AF",
+        "prices": [
+          {
+            "keys": {
+              "proc_time": {
+                "id": 1,
+                "name": "Next business day",
+                "days_count": 1
+              },
+              "visa_type": null
+            },
+            "fields": [
+              {
+                "id": "0",
+                "value": 1,
+                "label": "Service fee"
+              }
+            ]
+          }
+        ]
+      },
+      "key_questions": {
+        "email": [
+          "john.doe@example.com"
+        ],
+        "entrydate": [
+          null
+        ],
+        "last-name": [
+          "Test"
+        ],
+        "first-name": [
+          "Test"
+        ]
+      },
+      "meta_info": {},
+      "tax_rate": 0,
+      "conclusion_url": null
+    }
+  ],
+  "shipping_list": [],
+  "source": null,
+  "invoice_url": null
+}

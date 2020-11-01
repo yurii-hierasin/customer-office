@@ -1,0 +1,25 @@
+[
+  {
+    "id": 48,
+    "date": "2017-09-07T15:06:08.252+00:00",
+    "name": "pdf-test_doc.pdf",
+    "author": "Han Solo",
+    "url": "http://localhost:3031/pdf-test.pdf",
+    "tags": [
+      "evisa",
+      "financial",
+      "applicants-docs",
+      "identity"
+    ]
+  },
+  {
+    "id": 49,
+    "date": "2017-09-07T15:06:08.252+00:00",
+    "name": "pdf-test_doc2.pdf",
+    "author": "Han Solo",
+    "url": "http://localhost:3031/pdf-test2.pdf",
+    "tags": [
+      "conclusion"
+    ]
+  }
+]

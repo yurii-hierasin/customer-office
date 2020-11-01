@@ -1,0 +1,1456 @@
+{
+  "service_id": 5,
+  "service_item_id": 347,
+  "items": [
+    {
+      "label": "Traveler contacts",
+      "items": [
+        {
+          "is_iterated": false,
+          "items": [
+            {
+              "id": "homezip",
+              "is_required": false,
+              "label": "Zip Code",
+              "view": "text"
+            },
+            {
+              "id": "homestreet",
+              "is_required": false,
+              "label": "Street",
+              "view": "text"
+            },
+            {
+              "id": "housenumber",
+              "is_required": false,
+              "label": "House number",
+              "view": "text"
+            },
+            {
+              "id": "homecity",
+              "is_required": false,
+              "label": "City",
+              "view": "text"
+            },
+            {
+              "id": "homestate",
+              "is_required": false,
+              "label": "State",
+              "view": "text"
+            },
+            {
+              "id": "homecountry",
+              "is_required": false,
+              "label": "Country",
+              "view": "citizenship"
+            },
+            {
+              "id": "homephone",
+              "is_required": false,
+              "label": "Phone number",
+              "view": "text"
+            }
+          ]
+        },
+        {
+          "is_iterated": false,
+          "items": [
+            {
+              "id": "email",
+              "is_required": false,
+              "label": "Email Address",
+              "view": "text"
+            }
+          ]
+        },
+        {
+          "is_iterated": false,
+          "items": [
+            {
+              "id": "cellphone",
+              "is_required": false,
+              "label": "\u0421ell phone number",
+              "view": "text"
+            }
+          ]
+        },
+        {
+          "is_iterated": false,
+          "items": [
+            {
+              "id": "peraddress",
+              "is_required": false,
+              "label": "Permanent address",
+              "view": "text"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Traveler Details",
+      "items": [
+        {
+          "is_iterated": false,
+          "items": [
+            {
+              "id": "first-name",
+              "is_required": false,
+              "label": "First Name",
+              "help": "Please list as shown on passport",
+              "view": "text"
+            }
+          ]
+        },
+        {
+          "is_iterated": false,
+          "items": [
+            {
+              "id": "last-name",
+              "is_required": false,
+              "label": "Last Name",
+              "help": "Please list as shown on passport",
+              "view": "text"
+            }
+          ]
+        },
+        {
+          "is_iterated": false,
+          "items": [
+            {
+              "id": "datebirth",
+              "is_required": false,
+              "label": "Date of birth",
+              "view": "date"
+            }
+          ]
+        },
+        {
+          "is_iterated": false,
+          "items": [
+            {
+              "id": "alias",
+              "is_required": false,
+              "label": "Are you known by any other names or aliases?",
+              "view": "bool"
+            }
+          ]
+        },
+        {
+          "is_iterated": false,
+          "conditions": [
+            {
+              "question_id": "alias",
+              "value": "true",
+              "operator": "="
+            }
+          ],
+          "items": [
+            {
+              "id": "formername",
+              "is_required": false,
+              "label": "Maiden or Former Name",
+              "help": "Please fill out this field, If you ever used any other name (e.g. Nickname, Maiden Name, Alias, etc.)",
+              "view": "text"
+            },
+            {
+              "id": "formersurname",
+              "is_required": false,
+              "label": "Previous Surname",
+              "help": "Please fill out this field, If you ever used any other surname",
+              "view": "text"
+            }
+          ]
+        },
+        {
+          "is_iterated": false,
+          "items": [
+            {
+              "id": "sex",
+              "is_required": false,
+              "label": "Gender",
+              "view": "text",
+              "view_settings": {
+                "asselect": [
+                  "Male",
+                  "Female",
+                  "Transgender"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "is_iterated": false,
+          "items": [
+            {
+              "id": "placebirth",
+              "is_required": false,
+              "label": "Place of birth",
+              "help": "Please list the City, State and Country of birth as listed on passport",
+              "view": "text"
+            }
+          ]
+        },
+        {
+          "is_iterated": false,
+          "items": [
+            {
+              "id": "counrtybirth",
+              "is_required": false,
+              "label": "Country of birth",
+              "help": "Please list the Country of birth as listed on passport",
+              "view": "citizenship"
+            }
+          ]
+        },
+        {
+          "is_iterated": false,
+          "items": [
+            {
+              "id": "citizenship",
+              "is_required": false,
+              "label": "Citizenship",
+              "view": "citizenship"
+            }
+          ]
+        },
+        {
+          "is_iterated": false,
+          "items": [
+            {
+              "id": "previouscitizenship",
+              "is_required": false,
+              "label": "\u0421itizenship at birth",
+              "view": "citizenship"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Employment",
+      "items": [
+        {
+          "is_iterated": false,
+          "items": [
+            {
+              "id": "emplstatus",
+              "is_required": false,
+              "label": "Employment status",
+              "view": "text",
+              "view_settings": {
+                "asselect": [
+                  "Employed",
+                  "Self-Employed",
+                  "Student",
+                  "Retired",
+                  "Unemployed"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "is_iterated": false,
+          "conditions": [
+            {
+              "question_id": "emplstatus",
+              "value": "Employed",
+              "operator": "="
+            },
+            {
+              "question_id": "emplstatus",
+              "value": "Self-Employed",
+              "operator": "="
+            }
+          ],
+          "items": [
+            {
+              "id": "workaddress",
+              "is_required": false,
+              "label": "Work address",
+              "help": "Please provide address where you currently work",
+              "view": "text"
+            },
+            {
+              "id": "workcompany",
+              "is_required": false,
+              "label": "Name of company",
+              "view": "text"
+            },
+            {
+              "id": "workphone",
+              "is_required": false,
+              "label": "Work phone number",
+              "view": "text"
+            }
+          ]
+        },
+        {
+          "is_iterated": false,
+          "conditions": [
+            {
+              "question_id": "whistory",
+              "value": "Others",
+              "operator": "="
+            }
+          ],
+          "items": [
+            {
+              "id": "wposition",
+              "is_required": false,
+              "label": "Position",
+              "view": "text"
+            }
+          ]
+        },
+        {
+          "is_iterated": false,
+          "conditions": [
+            {
+              "question_id": "workposition",
+              "value": "Others",
+              "operator": "="
+            }
+          ],
+          "items": [
+            {
+              "id": "qualifications",
+              "is_required": false,
+              "label": "Please list your professional or technical qualifications",
+              "view": "text"
+            }
+          ]
+        },
+        {
+          "is_iterated": false,
+          "items": [
+            {
+              "id": "whistory",
+              "is_required": false,
+              "label": "List your most recent work history, excluding the current position",
+              "view": "text",
+              "view_settings": {
+                "asselect": [
+                  "Air Force",
+                  "Business Person",
+                  "Cameramen",
+                  "Charity\/Social Worker",
+                  "Chartered Accountant",
+                  "College\/University Teacher",
+                  "Diplomat",
+                  "Doctor",
+                  "Engineer",
+                  "Film Producer",
+                  "Government Service",
+                  "House Wife",
+                  "Journalist",
+                  "Labour",
+                  "Lawyer",
+                  "Mitary",
+                  "Missionary",
+                  "Navy",
+                  "News Broadcaster",
+                  "Official",
+                  "Others",
+                  "Police",
+                  "Press",
+                  "Private Service",
+                  "Publisher",
+                  "Reporter",
+                  "Researcher",
+                  "Sea Man",
+                  "Self Employed\/Freelancer",
+                  "Trader",
+                  "TV Producer",
+                  "UN Official",
+                  "Worker",
+                  "Writer",
+                  "Student",
+                  "Un-Employed",
+                  "Retired"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "is_iterated": false,
+          "conditions": [
+            {
+              "question_id": "emplstatus",
+              "value": "Employed",
+              "operator": "="
+            },
+            {
+              "question_id": "emplstatus",
+              "value": "Self-Employed",
+              "operator": "="
+            },
+            {
+              "question_id": "emplstatus",
+              "value": "Student",
+              "operator": "="
+            }
+          ],
+          "items": [
+            {
+              "id": "workposition",
+              "is_required": false,
+              "label": "Position",
+              "view": "text",
+              "view_settings": {
+                "asselect": [
+                  "Air Force",
+                  "Business Person",
+                  "Cameraman",
+                  "Charity\/Social Worker",
+                  "Chartered Accountant",
+                  "College\/University Teacher",
+                  "Diplomat",
+                  "Doctor",
+                  "Engineer",
+                  "Film Producer",
+                  "Government Service",
+                  "House Wife",
+                  "Journalist",
+                  "Labour",
+                  "Lawyer",
+                  "Media",
+                  "Military",
+                  "Missionary",
+                  "Navy",
+                  "News Broadcaster",
+                  "Official",
+                  "Others",
+                  "Police",
+                  "Press",
+                  "Private Service",
+                  "Publisher",
+                  "Reporter",
+                  "Researcher",
+                  "Sea Man",
+                  "Self Employed\/Freelancer",
+                  "Student",
+                  "Trader",
+                  "TV Producer",
+                  "UN Official",
+                  "Worker",
+                  "Writer"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Trip details",
+      "items": [
+        {
+          "is_iterated": false,
+          "items": [
+            {
+              "id": "appcountry",
+              "is_required": false,
+              "label": "Country Applying From",
+              "view": "text"
+            }
+          ]
+        },
+        {
+          "is_iterated": false,
+          "items": [
+            {
+              "id": "entrydate",
+              "is_required": false,
+              "label": "Date of entry",
+              "view": "date"
+            }
+          ]
+        },
+        {
+          "is_iterated": false,
+          "items": [
+            {
+              "id": "depdate",
+              "is_required": false,
+              "label": "Date of departure",
+              "view": "date"
+            }
+          ]
+        },
+        {
+          "is_iterated": false,
+          "items": [
+            {
+              "id": "porpvisit",
+              "is_required": false,
+              "label": "Purpose of visit",
+              "view": "text",
+              "view_settings": {
+                "asselect": [
+                  "Recreation\/Sight-Seeing",
+                  "Meeting Friends\/Relatives",
+                  "Short Term Yoga Programme"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "is_iterated": false,
+          "items": [
+            {
+              "id": "portdep",
+              "is_required": false,
+              "label": "Port of departure from the country",
+              "view": "text",
+              "view_settings": {
+                "asselect": [
+                  "Ahmedabad Airport",
+                  "Amritsar Airport",
+                  "Bagdogra Airport",
+                  "Bengaluru Airport",
+                  "Calicut Airport",
+                  "Chandigarh Airport",
+                  "Chennai Airport",
+                  "Cochin Airport",
+                  "Cochin Seaport",
+                  "Coimbatore Airport",
+                  "Delhi Airport",
+                  "Gaya Airport",
+                  "Goa Airport",
+                  "Goa Seaport",
+                  "Guwahati Airport",
+                  "Hyderabad Airport",
+                  "Jaipur Airport",
+                  "Kolkata Airport",
+                  "Lucknow Airport",
+                  "Mangalore Airport",
+                  "Mangalore Seaport",
+                  "Mumbai Airport",
+                  "Nagpur Airport",
+                  "Pune Airport",
+                  "Tiruchirapalli Airport",
+                  "Trivandrum Airport",
+                  "Varanasi Airport"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "is_iterated": false,
+          "items": [
+            {
+              "id": "travelbyport",
+              "is_required": false,
+              "label": "Port of entry",
+              "view": "text",
+              "view_settings": {
+                "asselect": [
+                  "Ahmedabad Airport",
+                  "Amritsar Airport",
+                  "Bagdogra",
+                  "Bengaluru Airport",
+                  "Calicut Airport",
+                  "Chandigarh Airport",
+                  "Chennai Airport",
+                  "Cochin Airport",
+                  "Cochin Seaport",
+                  "Coimbatore Airport",
+                  "Delhi Airport",
+                  "Gaya Airport",
+                  "Goa Airport",
+                  "Goa Seaport",
+                  "Guwahati Airport",
+                  "Hyderabad Airport",
+                  "Jaipur Airport",
+                  "Kolkata Airport",
+                  "Lucknow Airport",
+                  "Mangalore Airport",
+                  "Mumbai Airport",
+                  "Nagpur Airport",
+                  "Pune Airport",
+                  "Tiruchirapalli Airport",
+                  "Varanasi Airport",
+                  "Trivandrum Airport"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "is_iterated": false,
+          "items": [
+            {
+              "id": "placevisit",
+              "is_required": false,
+              "label": "Places you intend to visit",
+              "view": "text"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Travel history",
+      "items": [
+        {
+          "is_iterated": false,
+          "items": [
+            {
+              "id": "countrybefore",
+              "is_required": false,
+              "label": "Have you visited this country before?",
+              "view": "bool"
+            }
+          ]
+        },
+        {
+          "is_iterated": false,
+          "conditions": [
+            {
+              "question_id": "countrybefore",
+              "value": "true",
+              "operator": "="
+            }
+          ],
+          "items": [
+            {
+              "id": "visitbeforeplac",
+              "is_required": false,
+              "label": "Places you visited",
+              "view": "text"
+            },
+            {
+              "id": "visitbeforadd",
+              "is_required": false,
+              "label": "Address where you stayed",
+              "view": "text"
+            }
+          ]
+        },
+        {
+          "is_iterated": false,
+          "items": [
+            {
+              "id": "refused",
+              "is_required": false,
+              "label": "Have you ever been refused a visa to this country before?",
+              "view": "bool"
+            }
+          ]
+        },
+        {
+          "is_iterated": false,
+          "items": [
+            {
+              "id": "issuedvisa",
+              "is_required": false,
+              "label": "Have you ever been issued a visa to this country before?",
+              "view": "bool"
+            }
+          ]
+        },
+        {
+          "is_iterated": false,
+          "conditions": [
+            {
+              "question_id": "issuedvisa",
+              "value": "true",
+              "operator": "="
+            }
+          ],
+          "items": [
+            {
+              "id": "visanumber",
+              "is_required": false,
+              "label": "Visa number",
+              "view": "text"
+            },
+            {
+              "id": "issuedvisatype",
+              "is_required": false,
+              "label": "Type of Visa",
+              "view": "text",
+              "view_settings": {
+                "asselect": [
+                  "Business",
+                  "Conference",
+                  "Diplomatic",
+                  "Double Entry",
+                  "Employment",
+                  "Entry",
+                  "Journalist",
+                  "Medical Attendant",
+                  "Medical",
+                  "Missionary",
+                  "Mountaieering",
+                  "Official",
+                  "Piligrimes",
+                  "Project",
+                  "Research",
+                  "Student",
+                  "Tourist",
+                  "Transit",
+                  "UN Diplomat",
+                  "UN Official",
+                  "Visit",
+                  "Film",
+                  "Intern"
+                ]
+              }
+            },
+            {
+              "id": "visadate",
+              "is_required": false,
+              "label": "Visa issue date",
+              "view": "date"
+            },
+            {
+              "id": "issuedvisaplace",
+              "is_required": false,
+              "label": "Place of issue",
+              "view": "text"
+            }
+          ]
+        },
+        {
+          "is_iterated": false,
+          "conditions": [
+            {
+              "question_id": "refused",
+              "value": "true",
+              "operator": "="
+            }
+          ],
+          "items": [
+            {
+              "id": "refusedcon",
+              "is_required": false,
+              "label": "Country",
+              "view": "text"
+            },
+            {
+              "id": "refusedate",
+              "is_required": false,
+              "label": "Date",
+              "view": "date"
+            }
+          ]
+        },
+        {
+          "is_iterated": false,
+          "items": [
+            {
+              "id": "10yearvisit",
+              "is_required": false,
+              "label": "Countries visited in last 10 years",
+              "help": "Please enter countries that you have visited",
+              "view": "text"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Family information",
+      "items": [
+        {
+          "is_iterated": false,
+          "items": [
+            {
+              "id": "mrstatus",
+              "is_required": false,
+              "label": "Marital status",
+              "view": "text",
+              "view_settings": {
+                "asselect": [
+                  "Single",
+                  "Married"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "is_iterated": false,
+          "conditions": [
+            {
+              "question_id": "mrstatus",
+              "value": "Married",
+              "operator": "="
+            }
+          ],
+          "items": [
+            {
+              "id": "sfullname",
+              "is_required": false,
+              "label": "Spouse's full name",
+              "view": "text"
+            },
+            {
+              "id": "spsbplacecity",
+              "is_required": false,
+              "label": "Spouse's city of birth",
+              "view": "text"
+            },
+            {
+              "id": "spsbplacecountry",
+              "is_required": false,
+              "label": "Spouse's country of birth",
+              "view": "text"
+            },
+            {
+              "id": "spousecitizenship",
+              "is_required": false,
+              "label": "Spouse's citizenship",
+              "view": "citizenship"
+            },
+            {
+              "id": "spousepreviouscitizenship",
+              "is_required": false,
+              "label": "Spouse's previous citizenship \/ nationality at birth",
+              "view": "citizenship"
+            }
+          ]
+        },
+        {
+          "is_iterated": false,
+          "items": [
+            {
+              "id": "fplace",
+              "is_required": false,
+              "label": "Father's place of birth",
+              "view": "text"
+            },
+            {
+              "id": "fathercountry",
+              "is_required": false,
+              "label": "Father country of birth",
+              "view": "text"
+            },
+            {
+              "id": "fcitizen",
+              "is_required": false,
+              "label": "Father's citizenship",
+              "view": "citizenship"
+            },
+            {
+              "id": "fcitizenb",
+              "is_required": false,
+              "label": "Father's previous citizenship \/ nationality at birth",
+              "view": "citizenship"
+            }
+          ]
+        },
+        {
+          "is_iterated": false,
+          "items": [
+            {
+              "id": "mplace",
+              "is_required": false,
+              "label": "Mother's place of birth",
+              "view": "text"
+            },
+            {
+              "id": "mothercountry",
+              "is_required": false,
+              "label": "Mother's country of birth",
+              "view": "text"
+            },
+            {
+              "id": "mcitizenship",
+              "is_required": false,
+              "label": "Mother's citizenship",
+              "view": "citizenship"
+            },
+            {
+              "id": "mcitizenb",
+              "is_required": false,
+              "label": "Mother's previous citizenship \/ nationality at birth",
+              "view": "citizenship"
+            }
+          ]
+        },
+        {
+          "is_iterated": false,
+          "conditions": [
+            {
+              "question_id": "emplstatus",
+              "value": "Student",
+              "operator": "="
+            }
+          ],
+          "items": [
+            {
+              "id": "fposition",
+              "is_required": false,
+              "label": "Father's position",
+              "view": "text"
+            },
+            {
+              "id": "feaddress",
+              "is_required": false,
+              "label": "Father's employer address",
+              "view": "text"
+            },
+            {
+              "id": "femployer",
+              "is_required": false,
+              "label": "Father's name of employer",
+              "view": "text"
+            },
+            {
+              "id": "fwphone",
+              "is_required": false,
+              "label": "Father's work phone number",
+              "view": "text"
+            }
+          ]
+        },
+        {
+          "is_iterated": false,
+          "items": [
+            {
+              "id": "familypak",
+              "is_required": false,
+              "label": "Have you, your parents, or your grandparents ever held the nationality of Pakistan?",
+              "view": "bool"
+            }
+          ]
+        },
+        {
+          "is_iterated": false,
+          "conditions": [
+            {
+              "question_id": "familypak",
+              "value": "true",
+              "operator": "="
+            }
+          ],
+          "items": [
+            {
+              "id": "familypakdetails",
+              "is_required": false,
+              "label": "Please provide details",
+              "view": "text"
+            }
+          ]
+        },
+        {
+          "is_iterated": false,
+          "items": [
+            {
+              "id": "motherfullname",
+              "is_required": false,
+              "label": "Mother's full name",
+              "view": "text"
+            }
+          ]
+        },
+        {
+          "is_iterated": false,
+          "items": [
+            {
+              "id": "fatherfullname",
+              "is_required": false,
+              "label": "Father's full name",
+              "view": "text"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Education",
+      "items": [
+        {
+          "is_iterated": false,
+          "items": [
+            {
+              "id": "education",
+              "is_required": false,
+              "label": "Education",
+              "help": "Level or degree of education",
+              "view": "text",
+              "view_settings": {
+                "asselect": [
+                  "Below Matriculation",
+                  "Graduate",
+                  "Higher Secondary",
+                  "Illiterate",
+                  "Matriculation",
+                  "NA Being Minor",
+                  "Others",
+                  "Post Graduate",
+                  "Professional"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "References",
+      "items": [
+        {
+          "is_iterated": false,
+          "items": [
+            {
+              "id": "reference",
+              "is_required": false,
+              "label": "Type of reference in destination country",
+              "help": "Please provide details of reference in country",
+              "view": "text",
+              "view_settings": {
+                "asselect": [
+                  "Company",
+                  "Family",
+                  "Friend",
+                  "Hotel"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "is_iterated": false,
+          "conditions": [
+            {
+              "question_id": "reference",
+              "value": "Company",
+              "operator": "="
+            }
+          ],
+          "items": [
+            {
+              "id": "busorgnameref",
+              "is_required": false,
+              "label": "Name of organization",
+              "view": "text"
+            },
+            {
+              "id": "busaddrref",
+              "is_required": false,
+              "label": "Complete address",
+              "view": "text"
+            },
+            {
+              "id": "busphoneref",
+              "is_required": false,
+              "label": "Phone number",
+              "view": "text"
+            }
+          ]
+        },
+        {
+          "is_iterated": false,
+          "conditions": [
+            {
+              "question_id": "reference",
+              "value": "Hotel",
+              "operator": "="
+            }
+          ],
+          "items": [
+            {
+              "id": "hotelref",
+              "is_required": false,
+              "label": "Name of hotel where you will be staying",
+              "view": "text"
+            },
+            {
+              "id": "hotelstreetref",
+              "is_required": false,
+              "label": "Street address",
+              "view": "text"
+            },
+            {
+              "id": "hotelphoneref",
+              "is_required": false,
+              "label": "Hotel phone number",
+              "view": "text"
+            }
+          ]
+        },
+        {
+          "is_iterated": false,
+          "items": [
+            {
+              "id": "resrefrence",
+              "is_required": false,
+              "label": "Please provide a reference in country of current location",
+              "view": "text"
+            }
+          ]
+        },
+        {
+          "is_iterated": false,
+          "items": [
+            {
+              "id": "raddress",
+              "is_required": false,
+              "label": "Reference's current address",
+              "view": "text"
+            },
+            {
+              "id": "rphone",
+              "is_required": false,
+              "label": "Reference's phone number",
+              "view": "text"
+            }
+          ]
+        },
+        {
+          "is_iterated": false,
+          "conditions": [
+            {
+              "question_id": "reference",
+              "value": "Family",
+              "operator": "="
+            },
+            {
+              "question_id": "reference",
+              "value": "Friend",
+              "operator": "="
+            }
+          ],
+          "items": [
+            {
+              "id": "refffname",
+              "is_required": false,
+              "label": "Full name",
+              "view": "text"
+            },
+            {
+              "id": "refffstreet",
+              "is_required": false,
+              "label": "Street address",
+              "view": "text"
+            },
+            {
+              "id": "refffphone",
+              "is_required": false,
+              "label": "Phone number",
+              "view": "text"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Passport \/ Travel document",
+      "items": [
+        {
+          "is_iterated": false,
+          "items": [
+            {
+              "id": "pspnumber",
+              "is_required": false,
+              "label": "Passport number",
+              "view": "text"
+            }
+          ]
+        },
+        {
+          "is_iterated": false,
+          "items": [
+            {
+              "id": "pspplace",
+              "is_required": false,
+              "label": "Passport place of issue",
+              "help": "Type place of issue as shown in passport",
+              "view": "text"
+            }
+          ]
+        },
+        {
+          "is_iterated": false,
+          "items": [
+            {
+              "id": "pspdate",
+              "is_required": false,
+              "label": "Passport date of issue",
+              "view": "date"
+            }
+          ]
+        },
+        {
+          "is_iterated": false,
+          "items": [
+            {
+              "id": "pspexdate",
+              "is_required": false,
+              "label": "Passport expiration date",
+              "view": "date"
+            }
+          ]
+        },
+        {
+          "is_iterated": false,
+          "items": [
+            {
+              "id": "birthnaturalization",
+              "is_required": false,
+              "label": "Did you acquire present nationality by birth or by naturalization?",
+              "view": "text",
+              "view_settings": {
+                "asselect": [
+                  "By birth",
+                  "Naturalization"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "is_iterated": false,
+          "items": [
+            {
+              "id": "idnumhave",
+              "is_required": false,
+              "label": "Do you have National ID number?",
+              "view": "bool"
+            }
+          ]
+        },
+        {
+          "is_iterated": false,
+          "conditions": [
+            {
+              "question_id": "idnumhave",
+              "value": "true",
+              "operator": "="
+            }
+          ],
+          "items": [
+            {
+              "id": "idnum",
+              "is_required": false,
+              "label": "National ID number",
+              "view": "text"
+            }
+          ]
+        },
+        {
+          "is_iterated": false,
+          "items": [
+            {
+              "id": "otherpsp",
+              "is_required": false,
+              "label": "Do you hold any other valid Passport\/Identity Certificate(IC)?",
+              "view": "bool"
+            }
+          ]
+        },
+        {
+          "is_iterated": false,
+          "conditions": [
+            {
+              "question_id": "otherpsp",
+              "value": "true",
+              "operator": "="
+            }
+          ],
+          "items": [
+            {
+              "id": "otherpspcountry",
+              "is_required": false,
+              "label": "Country of Issue",
+              "view": "citizenship"
+            },
+            {
+              "id": "otherpspnum",
+              "is_required": false,
+              "label": "Passport\/IC No.",
+              "view": "text"
+            },
+            {
+              "id": "otherpspdate",
+              "is_required": false,
+              "label": "Date of Issue",
+              "view": "date"
+            },
+            {
+              "id": "otherpspplace",
+              "is_required": false,
+              "label": "Place of Issue",
+              "view": "text"
+            },
+            {
+              "id": "otherpspnationality",
+              "is_required": false,
+              "label": "Nationality mentioned there",
+              "view": "citizenship"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Other details",
+      "items": [
+        {
+          "is_iterated": false,
+          "items": [
+            {
+              "id": "religion",
+              "is_required": false,
+              "label": "Religion",
+              "view": "text",
+              "view_settings": {
+                "asselect": [
+                  "Bahai",
+                  "Buddhism",
+                  "Christian",
+                  "Hindu",
+                  "Islam",
+                  "Jainism",
+                  "Judaism",
+                  "Others",
+                  "Parsi",
+                  "Sikh",
+                  "Zoroastrian"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "is_iterated": false,
+          "conditions": [
+            {
+              "question_id": "religion",
+              "value": "Others",
+              "operator": "="
+            }
+          ],
+          "items": [
+            {
+              "id": "religionother",
+              "is_required": false,
+              "label": "Please specify",
+              "view": "text"
+            }
+          ]
+        },
+        {
+          "is_iterated": false,
+          "items": [
+            {
+              "id": "military",
+              "is_required": false,
+              "label": "Have you ever performed military service?",
+              "view": "bool"
+            }
+          ]
+        },
+        {
+          "is_iterated": false,
+          "conditions": [
+            {
+              "question_id": "military",
+              "value": "true",
+              "operator": "="
+            }
+          ],
+          "items": [
+            {
+              "id": "milbranch",
+              "is_required": false,
+              "label": "Branch of service",
+              "view": "text"
+            },
+            {
+              "id": "milrank",
+              "is_required": false,
+              "label": "Highest rank obtained",
+              "view": "text"
+            },
+            {
+              "id": "miloccupation",
+              "is_required": false,
+              "label": "Occupation\/duties",
+              "view": "text"
+            },
+            {
+              "id": "milplace",
+              "is_required": false,
+              "label": "Where were you posted?",
+              "view": "text"
+            }
+          ]
+        },
+        {
+          "is_iterated": false,
+          "items": [
+            {
+              "id": "distmarks",
+              "is_required": false,
+              "label": "Please list any distinguishing marks",
+              "help": "If none, write \"None\"",
+              "view": "text"
+            }
+          ]
+        },
+        {
+          "is_iterated": false,
+          "items": [
+            {
+              "id": "us2year",
+              "is_required": false,
+              "label": "Have you lived in the country of current residence for at least 2 years?",
+              "view": "bool"
+            }
+          ]
+        },
+        {
+          "is_iterated": false,
+          "items": [
+            {
+              "id": "saarc",
+              "is_required": false,
+              "label": "Have you visited South Asian Association for Regional Cooperation (SAARC) countries (except your own country) during last 3 years?",
+              "view": "bool"
+            }
+          ]
+        },
+        {
+          "is_iterated": true,
+          "conditions": [
+            {
+              "question_id": "saarc",
+              "value": "true",
+              "operator": "="
+            }
+          ],
+          "items": [
+            {
+              "id": "saarccountry",
+              "is_required": false,
+              "label": "Country",
+              "view": "citizenship"
+            },
+            {
+              "id": "saarcyear",
+              "is_required": false,
+              "label": "Year",
+              "view": "date"
+            },
+            {
+              "id": "saarcnumvis",
+              "is_required": false,
+              "label": "Number of visits",
+              "view": "text"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

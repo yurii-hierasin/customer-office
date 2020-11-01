@@ -15,6 +15,10 @@ export default class RetailAPI extends BaseAPI {
     fetchTranslations(locale: string) {
         return this.axios.get(`/translations/${locale}`)
     }
+
+    fetchOrders() {
+        return this.axios.get('/orders')
+    }
 }
 
 export const retailAPI = new RetailAPI()

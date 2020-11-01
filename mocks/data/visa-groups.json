@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "label": "5 Year visa",
+    "description": null,
+    "type": "misc",
+    "tags": []
+  },
+  {
+    "id": 2,
+    "label": "Adoption visa",
+    "description": null,
+    "type": "misc",
+    "tags": []
+  },
+  {
+    "id": 4,
+    "label": "Artist or Athlete visa",
+    "description": null,
+    "type": "misc",
+    "tags": []
+  },
+  {
+    "id": 7,
+    "label": "Business Invitation letter",
+    "description": null,
+    "type": "misc",
+    "tags": []
+  },
+  {
+    "id": 8,
+    "label": "Business Loose Leaf visa",
+    "description": null,
+    "type": "business",
+    "tags": []
+  }
+]

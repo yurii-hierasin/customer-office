@@ -2,16 +2,19 @@ import {combineReducers, applyMiddleware, createStore, compose} from 'redux';
 import createSagaMiddleware from 'redux-saga';
 import {all} from 'redux-saga/effects';
 
+import retailReducer from './retail/reducers'
 import appReducer from './app/reducers';
 import authReducer from './auth/reduces';
 import uiReducer from './ui/reducers';
 
+import {watchRequestOrders} from './retail/sagas';
 import {watchTranslationsRequest} from './app/sagas';
 import {watchRequestForgotPass, watchRequestProfile, watchRequestSignIn, watchRequestSingUp} from './auth/sagas';
 import {IApi} from '../interfaces/app';
 
 
 export const rootReducer = combineReducers({
+    retail: retailReducer,
     app: appReducer,
     auth: authReducer,
     ui: uiReducer,
@@ -25,6 +28,7 @@ function* rootSaga(api: IApi) {
         watchRequestSignIn(api),
         watchRequestForgotPass(api),
         watchRequestProfile(api),
+        watchRequestOrders(api),
         watchTranslationsRequest(api)
     ])
 }

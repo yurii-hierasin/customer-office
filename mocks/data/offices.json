@@ -1,0 +1,127 @@
+[
+  {
+    "keys": {
+      "residency": "DE"
+    },
+    "entityKeys": {
+      "residency": {
+        "alpha2": "DE",
+        "alpha3": "DEU",
+        "numeric": "276",
+        "label": "Germany"
+      }
+    },
+    "content": {
+      "groups": [
+        {
+          "child_groups": [],
+          "level": 0,
+          "name": "Offices",
+          "id": "3",
+          "content_type": "common"
+        }
+      ],
+      "components": [
+        {
+          "value": "Berlin",
+          "name": "Berlin|title",
+          "level": 0,
+          "id": "berlin_title",
+          "group_id": "3",
+          "content_type": "common",
+          "component_type": "text"
+        },
+        {
+          "value": "Schützenstraße 14, 10117 Berlin",
+          "name": "Berlin|address",
+          "level": 0,
+          "id": "berlin_address",
+          "group_id": "3",
+          "content_type": "common",
+          "component_type": "text"
+        },
+        {
+          "value": "30-7262-1575",
+          "name": "Berlin|phone-1",
+          "level": 0,
+          "id": "berlin_phone",
+          "group_id": "3",
+          "content_type": "common",
+          "component_type": "text"
+        },
+        {
+          "value": "+49-30-7262-1575",
+          "name": "Berlin|phone-link",
+          "level": 0,
+          "id": "berlin_phone_link",
+          "group_id": "3",
+          "content_type": "common",
+          "component_type": "text"
+        },
+        {
+          "value": "Monday — Friday, 9:00 - 17:30",
+          "name": "Berlin|working-hours-visits",
+          "level": 0,
+          "id": "berlin_hours_visit",
+          "group_id": "3",
+          "content_type": "common",
+          "component_type": "text"
+        },
+        {
+          "value": "info@visahq.de",
+          "name": "Berlin|email",
+          "level": 0,
+          "id": "berlin_email",
+          "group_id": "3",
+          "content_type": "common",
+          "component_type": "text"
+        },
+        {
+          "value": "berlin",
+          "name": "Berlin||office-id",
+          "level": 0,
+          "id": "berlin_id",
+          "group_id": "3",
+          "content_type": "common",
+          "component_type": "text"
+        },
+        {
+          "value": "Schützenstraße 14",
+          "name": "Berlin|adr-street1",
+          "level": 0,
+          "id": "berlin_adr_street1",
+          "group_id": "3",
+          "content_type": "common",
+          "component_type": "text"
+        },
+        {
+          "value": "Berlin",
+          "name": "Berlin|adr-city",
+          "level": 0,
+          "id": "berlin_adr_city",
+          "group_id": "3",
+          "content_type": "common",
+          "component_type": "text"
+        },
+        {
+          "value": "10117",
+          "name": "Berlin|adr-postal",
+          "level": 0,
+          "id": "berlin_adr_postal",
+          "group_id": "3",
+          "content_type": "common",
+          "component_type": "text"
+        },
+        {
+          "value": "VisaHQ UG (haftungsbeschränkt)",
+          "name": "Berlin|office-company",
+          "level": 0,
+          "id": "berlin_office_company",
+          "group_id": "3",
+          "content_type": "common",
+          "component_type": "text"
+        }
+      ]
+    }
+  }
+]

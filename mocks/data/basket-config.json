@@ -1,0 +1,7 @@
+{
+  "shipping": {"fields": [], "types": []},
+  "payment": [{"label": "Credit Card", "type": "cc"}, {"label": "PayPal", "type": "paypal"}],
+  "currency": {"code": "USD", "numeric": "840", "label": "US Dollar"},
+  "paypal_public_key": "Ad_sNzM2q1aony2tuD27B9jnSNJ08zjUQzjcSwjf71sYnwUvL0SeiU0aP353qfqV4nms-bu0E5GismnJ",
+  "stripe_public_key": "pk_test_844UBZh0FOvtyjzkaBGQnIlG"
+}

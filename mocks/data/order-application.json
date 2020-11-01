@@ -1,0 +1,332 @@
+{
+  "homezip": [
+    null
+  ],
+  "homestreet": [
+    null
+  ],
+  "housenumber": [
+    null
+  ],
+  "homecity": [
+    null
+  ],
+  "homestate": [
+    null
+  ],
+  "homecountry": [
+    null
+  ],
+  "homephone": [
+    null
+  ],
+  "email": [
+    "denis.starchenko@visahq.ua"
+  ],
+  "cellphone": [
+    null
+  ],
+  "peraddress": [
+    null
+  ],
+  "first-name": [
+    null
+  ],
+  "last-name": [
+    null
+  ],
+  "datebirth": [
+    null
+  ],
+  "alias": [
+    null
+  ],
+  "formername": [
+    null
+  ],
+  "formersurname": [
+    null
+  ],
+  "sex": [
+    null
+  ],
+  "placebirth": [
+    null
+  ],
+  "counrtybirth": [
+    null
+  ],
+  "citizenship": [
+    null
+  ],
+  "previouscitizenship": [
+    null
+  ],
+  "emplstatus": [
+    null
+  ],
+  "workaddress": [
+    null
+  ],
+  "workcompany": [
+    null
+  ],
+  "workphone": [
+    null
+  ],
+  "wposition": [
+    null
+  ],
+  "qualifications": [
+    null
+  ],
+  "whistory": [
+    null
+  ],
+  "workposition": [
+    null
+  ],
+  "appcountry": [
+    null
+  ],
+  "entrydate": [
+    null
+  ],
+  "depdate": [
+    null
+  ],
+  "porpvisit": [
+    null
+  ],
+  "portdep": [
+    null
+  ],
+  "travelbyport": [
+    null
+  ],
+  "placevisit": [
+    null
+  ],
+  "countrybefore": [
+    null
+  ],
+  "visitbeforeplac": [
+    null
+  ],
+  "visitbeforadd": [
+    null
+  ],
+  "refused": [
+    null
+  ],
+  "issuedvisa": [
+    null
+  ],
+  "visanumber": [
+    null
+  ],
+  "issuedvisatype": [
+    null
+  ],
+  "visadate": [
+    null
+  ],
+  "issuedvisaplace": [
+    null
+  ],
+  "refusedcon": [
+    null
+  ],
+  "refusedate": [
+    null
+  ],
+  "10yearvisit": [
+    null
+  ],
+  "mrstatus": [
+    null
+  ],
+  "sfullname": [
+    null
+  ],
+  "spsbplacecity": [
+    null
+  ],
+  "spsbplacecountry": [
+    null
+  ],
+  "spousecitizenship": [
+    null
+  ],
+  "spousepreviouscitizenship": [
+    null
+  ],
+  "fplace": [
+    null
+  ],
+  "fathercountry": [
+    null
+  ],
+  "fcitizen": [
+    null
+  ],
+  "fcitizenb": [
+    null
+  ],
+  "mplace": [
+    null
+  ],
+  "mothercountry": [
+    null
+  ],
+  "mcitizenship": [
+    null
+  ],
+  "mcitizenb": [
+    null
+  ],
+  "fposition": [
+    null
+  ],
+  "feaddress": [
+    null
+  ],
+  "femployer": [
+    null
+  ],
+  "fwphone": [
+    null
+  ],
+  "familypak": [
+    null
+  ],
+  "familypakdetails": [
+    null
+  ],
+  "motherfullname": [
+    null
+  ],
+  "fatherfullname": [
+    null
+  ],
+  "education": [
+    null
+  ],
+  "reference": [
+    null
+  ],
+  "busorgnameref": [
+    null
+  ],
+  "busaddrref": [
+    null
+  ],
+  "busphoneref": [
+    null
+  ],
+  "hotelref": [
+    null
+  ],
+  "hotelstreetref": [
+    null
+  ],
+  "hotelphoneref": [
+    null
+  ],
+  "resrefrence": [
+    null
+  ],
+  "raddress": [
+    null
+  ],
+  "rphone": [
+    null
+  ],
+  "refffname": [
+    null
+  ],
+  "refffstreet": [
+    null
+  ],
+  "refffphone": [
+    null
+  ],
+  "pspnumber": [
+    null
+  ],
+  "pspplace": [
+    null
+  ],
+  "pspdate": [
+    null
+  ],
+  "pspexdate": [
+    null
+  ],
+  "birthnaturalization": [
+    null
+  ],
+  "idnumhave": [
+    null
+  ],
+  "idnum": [
+    null
+  ],
+  "otherpsp": [
+    null
+  ],
+  "otherpspcountry": [
+    null
+  ],
+  "otherpspnum": [
+    null
+  ],
+  "otherpspdate": [
+    null
+  ],
+  "otherpspplace": [
+    null
+  ],
+  "otherpspnationality": [
+    null
+  ],
+  "religion": [
+    null
+  ],
+  "religionother": [
+    null
+  ],
+  "military": [
+    null
+  ],
+  "milbranch": [
+    null
+  ],
+  "milrank": [
+    null
+  ],
+  "miloccupation": [
+    null
+  ],
+  "milplace": [
+    null
+  ],
+  "distmarks": [
+    null
+  ],
+  "us2year": [
+    null
+  ],
+  "saarc": [
+    null
+  ],
+  "saarccountry": [
+    null
+  ],
+  "saarcyear": [
+    null
+  ],
+  "saarcnumvis": [
+    null
+  ]
+}

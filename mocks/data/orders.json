@@ -1,0 +1,896 @@
+[
+  {
+    "id": 19945,
+    "invoice": "US288666",
+    "user_id": "224611",
+    "status": "paid",
+    "created": "2020-11-01T14:19:03.151+00:00",
+    "updated": "2020-11-01T14:19:05.509+00:00",
+    "total": 348,
+    "service_list": [
+      {
+        "id": 21849,
+        "order_id": 19945,
+        "currency": {
+          "code": "USD",
+          "numeric": "840",
+          "label": "US Dollar"
+        },
+        "total": 94,
+        "created": "2020-11-01T14:19:03.181+00:00",
+        "updated": "2020-11-01T14:19:03.181+00:00",
+        "status": "pending",
+        "cost_list": {
+          "keys": {
+            "proc_time": {
+              "id": 1,
+              "name": "Next business day",
+              "days_count": 1
+            },
+            "visa_type": {
+              "id": 156,
+              "name": "Double entry (30 days stay)"
+            },
+            "docs_count": null,
+            "validity": null
+          },
+          "fields": [
+            {
+              "id": "0",
+              "value": 35,
+              "label": "Embassy fee",
+              "currency": {
+                "code": "USD",
+                "numeric": "840",
+                "label": "US Dollar"
+              },
+              "fieldCost": 35,
+              "fieldTax": 0,
+              "total": 35,
+              "taxed": false,
+              "zero_hidden": false
+            },
+            {
+              "id": "1",
+              "value": 59,
+              "label": "Service fee",
+              "currency": {
+                "code": "USD",
+                "numeric": "840",
+                "label": "US Dollar"
+              },
+              "fieldCost": 59,
+              "fieldTax": 0,
+              "total": 59,
+              "taxed": false,
+              "zero_hidden": false
+            }
+          ]
+        },
+        "service": {
+          "id": 5,
+          "label": "Visa Service",
+          "keys": [
+            "residency",
+            "citizenship",
+            "destination",
+            "jurisdiction",
+            "visa_group"
+          ],
+          "prices": {
+            "keys": [
+              "visa_type",
+              "proc_time"
+            ],
+            "fields": [
+              {
+                "id": 0,
+                "label": "Embassy fee",
+                "is_taxed": false,
+                "zero_hidden": false
+              },
+              {
+                "id": 1,
+                "label": "Service fee",
+                "is_taxed": true,
+                "zero_hidden": false
+              }
+            ]
+          },
+          "identifier": "visa"
+        },
+        "service_item": {
+          "id": 22759112,
+          "service_id": 5,
+          "residency": "US",
+          "citizenship": "US",
+          "destination": "LK",
+          "visa_group": 171,
+          "jurisdiction": 1,
+          "prices": [
+            {
+              "keys": {
+                "proc_time": {
+                  "id": 1,
+                  "name": "Next business day",
+                  "days_count": 1
+                },
+                "visa_type": {
+                  "id": 156,
+                  "name": "Double entry (30 days stay)"
+                },
+                "docs_count": null,
+                "validity": null
+              },
+              "fields": [
+                {
+                  "id": "0",
+                  "value": 35,
+                  "label": "Embassy fee",
+                  "currency": null,
+                  "fieldCost": 35,
+                  "fieldTax": 0,
+                  "total": 35,
+                  "taxed": false,
+                  "zero_hidden": false
+                },
+                {
+                  "id": "1",
+                  "value": 59,
+                  "label": "Service fee",
+                  "currency": null,
+                  "fieldCost": 59,
+                  "fieldTax": 0,
+                  "total": 59,
+                  "taxed": false,
+                  "zero_hidden": false
+                }
+              ]
+            }
+          ],
+          "offline": false
+        },
+        "key_questions": {
+          "sex": [
+            "Male"
+          ],
+          "email": [
+            "john.doe@example.com"
+          ],
+          "datebirth": [
+            "1987-09-15"
+          ],
+          "entrydate": [
+            null
+          ],
+          "last-name": [
+            "Doe"
+          ],
+          "pspexdate": [
+            null
+          ],
+          "emplstatus": [
+            null
+          ],
+          "first-name": [
+            "John"
+          ]
+        },
+        "meta_info": {},
+        "tax_rate": 0,
+        "conclusion_url": null
+      },
+      {
+        "id": 21852,
+        "order_id": 19945,
+        "currency": {
+          "code": "USD",
+          "numeric": "840",
+          "label": "US Dollar"
+        },
+        "total": 149,
+        "created": "2020-11-01T14:19:03.221+00:00",
+        "updated": "2020-11-01T14:19:03.221+00:00",
+        "status": "pending",
+        "cost_list": {
+          "keys": {
+            "proc_time": {
+              "id": 14,
+              "name": "6 business days",
+              "days_count": 6
+            },
+            "visa_type": {
+              "id": 34,
+              "name": "Single entry (30 days stay)"
+            },
+            "docs_count": null,
+            "validity": null
+          },
+          "fields": [
+            {
+              "id": "0",
+              "value": 50,
+              "label": "Embassy fee",
+              "currency": {
+                "code": "USD",
+                "numeric": "840",
+                "label": "US Dollar"
+              },
+              "fieldCost": 50,
+              "fieldTax": 0,
+              "total": 50,
+              "taxed": false,
+              "zero_hidden": false
+            },
+            {
+              "id": "1",
+              "value": 99,
+              "label": "Service fee",
+              "currency": {
+                "code": "USD",
+                "numeric": "840",
+                "label": "US Dollar"
+              },
+              "fieldCost": 99,
+              "fieldTax": 0,
+              "total": 99,
+              "taxed": false,
+              "zero_hidden": false
+            }
+          ]
+        },
+        "service": {
+          "id": 5,
+          "label": "Visa Service",
+          "keys": [
+            "residency",
+            "citizenship",
+            "destination",
+            "jurisdiction",
+            "visa_group"
+          ],
+          "prices": {
+            "keys": [
+              "visa_type",
+              "proc_time"
+            ],
+            "fields": [
+              {
+                "id": 0,
+                "label": "Embassy fee",
+                "is_taxed": false,
+                "zero_hidden": false
+              },
+              {
+                "id": 1,
+                "label": "Service fee",
+                "is_taxed": true,
+                "zero_hidden": false
+              }
+            ]
+          },
+          "identifier": "visa"
+        },
+        "service_item": {
+          "id": 22753669,
+          "service_id": 5,
+          "residency": "US",
+          "citizenship": "US",
+          "destination": "KE",
+          "visa_group": 102,
+          "jurisdiction": 1,
+          "prices": [
+            {
+              "keys": {
+                "proc_time": {
+                  "id": 14,
+                  "name": "6 business days",
+                  "days_count": 6
+                },
+                "visa_type": {
+                  "id": 34,
+                  "name": "Single entry (30 days stay)"
+                },
+                "docs_count": null,
+                "validity": null
+              },
+              "fields": [
+                {
+                  "id": "0",
+                  "value": 50,
+                  "label": "Embassy fee",
+                  "currency": null,
+                  "fieldCost": 50,
+                  "fieldTax": 0,
+                  "total": 50,
+                  "taxed": false,
+                  "zero_hidden": false
+                },
+                {
+                  "id": "1",
+                  "value": 99,
+                  "label": "Service fee",
+                  "currency": null,
+                  "fieldCost": 99,
+                  "fieldTax": 0,
+                  "total": 99,
+                  "taxed": false,
+                  "zero_hidden": false
+                }
+              ]
+            },
+            {
+              "keys": {
+                "proc_time": {
+                  "id": 14,
+                  "name": "6 business days",
+                  "days_count": 6
+                },
+                "visa_type": {
+                  "id": 22,
+                  "name": "Multiple entry (30 days stay)"
+                },
+                "docs_count": null,
+                "validity": null
+              },
+              "fields": [
+                {
+                  "id": "0",
+                  "value": 100,
+                  "label": "Embassy fee",
+                  "currency": null,
+                  "fieldCost": 100,
+                  "fieldTax": 0,
+                  "total": 100,
+                  "taxed": false,
+                  "zero_hidden": false
+                },
+                {
+                  "id": "1",
+                  "value": 99,
+                  "label": "Service fee",
+                  "currency": null,
+                  "fieldCost": 99,
+                  "fieldTax": 0,
+                  "total": 99,
+                  "taxed": false,
+                  "zero_hidden": false
+                }
+              ]
+            },
+            {
+              "keys": {
+                "proc_time": {
+                  "id": 5,
+                  "name": "3 business days",
+                  "days_count": 3
+                },
+                "visa_type": {
+                  "id": 34,
+                  "name": "Single entry (30 days stay)"
+                },
+                "docs_count": null,
+                "validity": null
+              },
+              "fields": [
+                {
+                  "id": "0",
+                  "value": 70,
+                  "label": "Embassy fee",
+                  "currency": null,
+                  "fieldCost": 70,
+                  "fieldTax": 0,
+                  "total": 70,
+                  "taxed": false,
+                  "zero_hidden": false
+                },
+                {
+                  "id": "1",
+                  "value": 139,
+                  "label": "Service fee",
+                  "currency": null,
+                  "fieldCost": 139,
+                  "fieldTax": 0,
+                  "total": 139,
+                  "taxed": false,
+                  "zero_hidden": false
+                }
+              ]
+            },
+            {
+              "keys": {
+                "proc_time": {
+                  "id": 3,
+                  "name": "2 business days",
+                  "days_count": 2
+                },
+                "visa_type": {
+                  "id": 34,
+                  "name": "Single entry (30 days stay)"
+                },
+                "docs_count": null,
+                "validity": null
+              },
+              "fields": [
+                {
+                  "id": "0",
+                  "value": 90,
+                  "label": "Embassy fee",
+                  "currency": null,
+                  "fieldCost": 90,
+                  "fieldTax": 0,
+                  "total": 90,
+                  "taxed": false,
+                  "zero_hidden": false
+                },
+                {
+                  "id": "1",
+                  "value": 159,
+                  "label": "Service fee",
+                  "currency": null,
+                  "fieldCost": 159,
+                  "fieldTax": 0,
+                  "total": 159,
+                  "taxed": false,
+                  "zero_hidden": false
+                }
+              ]
+            },
+            {
+              "keys": {
+                "proc_time": {
+                  "id": 5,
+                  "name": "3 business days",
+                  "days_count": 3
+                },
+                "visa_type": {
+                  "id": 22,
+                  "name": "Multiple entry (30 days stay)"
+                },
+                "docs_count": null,
+                "validity": null
+              },
+              "fields": [
+                {
+                  "id": "0",
+                  "value": 120,
+                  "label": "Embassy fee",
+                  "currency": null,
+                  "fieldCost": 120,
+                  "fieldTax": 0,
+                  "total": 120,
+                  "taxed": false,
+                  "zero_hidden": false
+                },
+                {
+                  "id": "1",
+                  "value": 139,
+                  "label": "Service fee",
+                  "currency": null,
+                  "fieldCost": 139,
+                  "fieldTax": 0,
+                  "total": 139,
+                  "taxed": false,
+                  "zero_hidden": false
+                }
+              ]
+            },
+            {
+              "keys": {
+                "proc_time": {
+                  "id": 3,
+                  "name": "2 business days",
+                  "days_count": 2
+                },
+                "visa_type": {
+                  "id": 22,
+                  "name": "Multiple entry (30 days stay)"
+                },
+                "docs_count": null,
+                "validity": null
+              },
+              "fields": [
+                {
+                  "id": "0",
+                  "value": 140,
+                  "label": "Embassy fee",
+                  "currency": null,
+                  "fieldCost": 140,
+                  "fieldTax": 0,
+                  "total": 140,
+                  "taxed": false,
+                  "zero_hidden": false
+                },
+                {
+                  "id": "1",
+                  "value": 159,
+                  "label": "Service fee",
+                  "currency": null,
+                  "fieldCost": 159,
+                  "fieldTax": 0,
+                  "total": 159,
+                  "taxed": false,
+                  "zero_hidden": false
+                }
+              ]
+            }
+          ],
+          "offline": false
+        },
+        "key_questions": {
+          "sex": [
+            null
+          ],
+          "email": [
+            "john.doe@example.com"
+          ],
+          "criminal": [
+            null
+          ],
+          "datebirth": [
+            "1987-09-15"
+          ],
+          "entrydate": [
+            null
+          ],
+          "last-name": [
+            "Doe"
+          ],
+          "pspexdate": [
+            null
+          ],
+          "emplstatus": [
+            null
+          ],
+          "first-name": [
+            "John"
+          ],
+          "placebirth": [
+            null
+          ],
+          "previouscitizenship": [
+            null
+          ]
+        },
+        "meta_info": {},
+        "tax_rate": 0,
+        "conclusion_url": null
+      }
+    ],
+    "shipping_list": [
+      {
+        "id": 735,
+        "order_id": 19945,
+        "currency": {
+          "code": "USD",
+          "numeric": "840",
+          "label": "US Dollar"
+        },
+        "status": "completed",
+        "total": 35,
+        "from_client": true,
+        "sender": {
+          "country": {
+            "alpha2": "US",
+            "alpha3": "USA",
+            "numeric": "840",
+            "label": "United States of America"
+          },
+          "province": {
+            "state": "NY",
+            "label": "New York",
+            "residency": "US"
+          },
+          "city": "Bay Shore",
+          "postal_code": "11706",
+          "street": "34 Peach Place",
+          "contact_name": "John Doe",
+          "phone": "123-123-5555",
+          "email": "john.doe@example.com",
+          "company_name": null
+        },
+        "recipient": {
+          "country": {
+            "alpha2": "US",
+            "alpha3": "USA",
+            "numeric": "840",
+            "label": "United States of America"
+          },
+          "province": {
+            "state": "NY",
+            "label": "New York",
+            "residency": "US"
+          },
+          "city": "New York",
+          "postal_code": "10036-5601",
+          "street": "1501 Broadway, Ste 12074",
+          "contact_name": "VisaHQ.com Inc.",
+          "phone": "+1-800-345-6541",
+          "email": "info@visahq.com",
+          "company_name": null
+        },
+        "type": "inbound",
+        "shipment_name": "Fedex Standard Overnight",
+        "default_prices": false,
+        "service_name": "shipping.postmen.fedex.us.inbound",
+        "additional_options": null
+      },
+      {
+        "id": 736,
+        "order_id": 19945,
+        "currency": {
+          "code": "USD",
+          "numeric": "840",
+          "label": "US Dollar"
+        },
+        "status": "pending",
+        "total": 70,
+        "from_client": false,
+        "sender": {
+          "country": {
+            "alpha2": "US",
+            "alpha3": "USA",
+            "numeric": "840",
+            "label": "United States of America"
+          },
+          "province": {
+            "state": "NY",
+            "label": "New York",
+            "residency": "US"
+          },
+          "city": "New York",
+          "postal_code": "10036-5601",
+          "street": "1501 Broadway, Ste 12074",
+          "contact_name": "VisaHQ.com Inc.",
+          "phone": "+1-800-345-6541",
+          "email": "info@visahq.com",
+          "company_name": null
+        },
+        "recipient": {
+          "country": {
+            "alpha2": "US",
+            "alpha3": "USA",
+            "numeric": "840",
+            "label": "United States of America"
+          },
+          "province": {
+            "state": "NY",
+            "label": "New York",
+            "residency": "US"
+          },
+          "city": "Bay Shore",
+          "postal_code": "11706",
+          "street": "34 Peach Place",
+          "contact_name": "John Doe",
+          "phone": "123-123-5555",
+          "email": "john.doe@example.com",
+          "company_name": null
+        },
+        "type": "outbound",
+        "shipment_name": "Fedex Priority Overnight",
+        "default_prices": false,
+        "service_name": "shipping.postmen.fedex.us.outbound",
+        "additional_options": null
+      }
+    ],
+    "source": null,
+    "invoice_url": null,
+    "affiliate": null
+  },
+  {
+    "id": 19948,
+    "invoice": "US288669",
+    "user_id": "224611",
+    "status": "paid",
+    "created": "2020-11-01T14:20:20.911+00:00",
+    "updated": "2020-11-01T14:20:23.055+00:00",
+    "total": 554,
+    "service_list": [
+      {
+        "id": 21855,
+        "order_id": 19948,
+        "currency": {
+          "code": "USD",
+          "numeric": "840",
+          "label": "US Dollar"
+        },
+        "total": 554,
+        "created": "2020-11-01T14:20:20.923+00:00",
+        "updated": "2020-11-01T14:20:20.923+00:00",
+        "status": "pending",
+        "cost_list": {
+          "keys": {
+            "proc_time": {
+              "id": 50,
+              "name": "12-15 business days",
+              "days_count": 15
+            },
+            "visa_type": {
+              "id": 19,
+              "name": "Multiple entry"
+            },
+            "docs_count": null,
+            "validity": null
+          },
+          "fields": [
+            {
+              "id": "0",
+              "value": 345,
+              "label": "Embassy fee",
+              "currency": {
+                "code": "USD",
+                "numeric": "840",
+                "label": "US Dollar"
+              },
+              "fieldCost": 345,
+              "fieldTax": 0,
+              "total": 345,
+              "taxed": false,
+              "zero_hidden": false
+            },
+            {
+              "id": "1",
+              "value": 209,
+              "label": "Service fee",
+              "currency": {
+                "code": "USD",
+                "numeric": "840",
+                "label": "US Dollar"
+              },
+              "fieldCost": 209,
+              "fieldTax": 0,
+              "total": 209,
+              "taxed": false,
+              "zero_hidden": false
+            }
+          ]
+        },
+        "service": {
+          "id": 5,
+          "label": "Visa Service",
+          "keys": [
+            "residency",
+            "citizenship",
+            "destination",
+            "jurisdiction",
+            "visa_group"
+          ],
+          "prices": {
+            "keys": [
+              "visa_type",
+              "proc_time"
+            ],
+            "fields": [
+              {
+                "id": 0,
+                "label": "Embassy fee",
+                "is_taxed": false,
+                "zero_hidden": false
+              },
+              {
+                "id": 1,
+                "label": "Service fee",
+                "is_taxed": true,
+                "zero_hidden": false
+              }
+            ]
+          },
+          "identifier": "visa"
+        },
+        "service_item": {
+          "id": 22794860,
+          "service_id": 5,
+          "residency": "US",
+          "citizenship": "US",
+          "destination": "UA",
+          "visa_group": 220,
+          "jurisdiction": 1,
+          "prices": [
+            {
+              "keys": {
+                "proc_time": {
+                  "id": 50,
+                  "name": "12-15 business days",
+                  "days_count": 15
+                },
+                "visa_type": {
+                  "id": 19,
+                  "name": "Multiple entry"
+                },
+                "docs_count": null,
+                "validity": null
+              },
+              "fields": [
+                {
+                  "id": "0",
+                  "value": 345,
+                  "label": "Embassy fee",
+                  "currency": null,
+                  "fieldCost": 345,
+                  "fieldTax": 0,
+                  "total": 345,
+                  "taxed": false,
+                  "zero_hidden": false
+                },
+                {
+                  "id": "1",
+                  "value": 209,
+                  "label": "Service fee",
+                  "currency": null,
+                  "fieldCost": 209,
+                  "fieldTax": 0,
+                  "total": 209,
+                  "taxed": false,
+                  "zero_hidden": false
+                }
+              ]
+            }
+          ],
+          "offline": false
+        },
+        "key_questions": {
+          "sex": [
+            "Male"
+          ],
+          "email": [
+            "john.doe@example.com"
+          ],
+          "mrstatus": [
+            null
+          ],
+          "datebirth": [
+            "1987-09-15"
+          ],
+          "entrydate": [
+            null
+          ],
+          "last-name": [
+            "Doe"
+          ],
+          "pspexdate": [
+            null
+          ],
+          "emplstatus": [
+            null
+          ],
+          "first-name": [
+            "John"
+          ],
+          "placebirth": [
+            null
+          ],
+          "previouscitizenship": [
+            null
+          ]
+        },
+        "meta_info": {},
+        "tax_rate": 0,
+        "conclusion_url": null
+      }
+    ],
+    "shipping_list": [
+      {
+        "id": 737,
+        "order_id": 19948,
+        "currency": {
+          "code": "USD",
+          "numeric": "840",
+          "label": "US Dollar"
+        },
+        "status": "completed",
+        "total": 0,
+        "from_client": false,
+        "sender": null,
+        "recipient": null,
+        "type": "local",
+        "shipment_name": "Local pickup",
+        "default_prices": true,
+        "service_name": "shipping.local",
+        "additional_options": null
+      }
+    ],
+    "source": null,
+    "invoice_url": null,
+    "affiliate": null
+  }
+]
