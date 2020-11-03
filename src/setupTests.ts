@@ -3,7 +3,7 @@
 // expect(element).toHaveTextContent(/react/i)
 // learn more: https://github.com/testing-library/jest-dom
 import '@testing-library/jest-dom/extend-expect';
-import {configure, ReactWrapper} from 'enzyme';
+import {configure, ReactWrapper, ShallowWrapper} from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import configureStore from './store';
 import RetailAPI from './api/retailAPI';
@@ -11,7 +11,7 @@ import AuthAPI from './api/authAPI';
 
 configure({ adapter: new Adapter() })
 
-export const findByTestAttr = (component: ReactWrapper, attr: string) => {
+export const findByTestAttr = (component: ReactWrapper | ShallowWrapper, attr: string) => {
     return component.find(`[data-test='${attr}']`);
 }
 

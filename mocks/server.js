@@ -48,3 +48,18 @@ server.get('/me/profile', (req, res) => {
     res.send(require('./data/profile.json'))
 })
 
+server.get('/orders', (req, res) => {
+    res.send(require('./data/orders.json'))
+})
+
+server.get('/visa-groups', (req, res) => {
+    res.json(require('./data/visa-groups'))
+})
+
+server.get('/destinations', (req, res) => {
+    res.json(require('./data/destinations'))
+})
+
+server.get('/citizenships', (req, res) => {
+    res.send(require('./data/citizenships'))
+})

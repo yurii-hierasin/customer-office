@@ -1,0 +1,19 @@
+.context-dropdown-wrapper {
+
+    .dropleft .dropdown-toggle::before {
+        display: none;
+    }
+
+    button {
+        background-color: transparent;
+        border: none;
+        color: inherit;
+        border-radius: 50%;
+        padding: 6px 10px;
+    }
+
+    button:hover {
+        background-color: #ececec;
+    }
+
+}

@@ -33,5 +33,28 @@
     "description": null,
     "type": "business",
     "tags": []
+  },
+  {
+    "id": 102,
+    "label": "Tourist visa",
+    "description": "up to 180 days",
+    "type": "tourist",
+    "tags": []
+  },
+  {
+    "id": 171,
+    "label": "Tourist E-visa",
+    "description": "up to 180 days",
+    "type": "tourist",
+    "tags": [
+      "evisa"
+    ]
+  },
+  {
+    "id": 220,
+    "label": "Work visa",
+    "description": "up to 1 year",
+    "type": "misc",
+    "tags": []
   }
 ]

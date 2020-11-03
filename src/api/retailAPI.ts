@@ -19,6 +19,19 @@ export default class RetailAPI extends BaseAPI {
     fetchOrders() {
         return this.axios.get('/orders')
     }
+
+    fetchVisaGroups() {
+        return this.axios.get('/visa-groups')
+    }
+
+    fetchDestinations () {
+        return this.axios.get('/destinations')
+    }
+
+    fetchCitizenships () {
+        return this.axios.get('/citizenships')
+    }
+
 }
 
 export const retailAPI = new RetailAPI()
