@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ApplicationMenu component should render 1`] = `
+<DropdownButton
+  drop="left"
+  title={
+    <img
+      alt="menu"
+      className="mb-1"
+      src="TreeDotsVertical.svg"
+    />
+  }
+>
+  <DropdownItem
+    as="button"
+    disabled={false}
+  >
+    <img
+      alt="Edit application"
+      src="Edit.svg"
+    />
+    <span
+      className="pl-1"
+      data-test="edit"
+    >
+      Edit
+    </span>
+  </DropdownItem>
+  <DropdownItem
+    as="button"
+    disabled={false}
+  >
+    <img
+      alt="Upload|Download files"
+      src="Upload.svg"
+    />
+    <span
+      className="pl-1"
+      data-test="file"
+    >
+      File
+    </span>
+  </DropdownItem>
+  <DropdownDivider
+    role="separator"
+  />
+  <DropdownItemText>
+    <p>
+      Service details:
+    </p>
+    <p>
+      <span>
+        Order: 
+      </span>
+      <span
+        data-test="order-number"
+      >
+        US288669
+      </span>
+    </p>
+    <p>
+      <span>
+        Inbound shipping: 
+      </span>
+      <span
+        data-test="shipping-inbound-label"
+      >
+        None
+      </span>
+    </p>
+    <p>
+      <span>
+        Return shipping: 
+      </span>
+      <span
+        data-test="shipping-return-label"
+      >
+        None
+      </span>
+    </p>
+  </DropdownItemText>
+</DropdownButton>
+`;

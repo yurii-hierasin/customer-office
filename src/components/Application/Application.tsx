@@ -1,6 +1,5 @@
 import React from 'react';
-import {Dropdown, DropdownButton} from 'react-bootstrap';
-import {IDestination, IOrder, IServiceListItem, IVisaGroup, ShipmentTypesEnum} from '../../store/retail/interfaces';
+import {IDestination, IOrder, IServiceListItem, IVisaGroup} from '../../store/retail/interfaces';
 import ApplicationService from '../../services/ApplicationService';
 import {useSelector} from 'react-redux';
 import {RootState} from '../../store';
