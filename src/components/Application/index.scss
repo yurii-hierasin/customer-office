@@ -4,7 +4,11 @@
         display: none;
     }
 
-    button {
+    .dropdown-menu {
+        min-width: 16rem;
+    }
+
+    button.dropdown-toggle {
         background-color: transparent;
         border: none;
         color: inherit;

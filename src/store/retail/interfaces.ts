@@ -107,7 +107,7 @@ export interface IShipment {
     id: number;
     order_id: number
     currency: ICurrency
-    type: string;
+    type: ShipmentTypesEnum;
     status: string;
     shipment_name: string;
     from_client: boolean
@@ -117,6 +117,11 @@ export interface IShipment {
     default_prices: boolean
     service_name: string
     additional_options: string | null
+}
+
+export enum ShipmentTypesEnum {
+    outbound = 'outbound',
+    inbound = 'inbound'
 }
 
 export interface IShipmentAddress {

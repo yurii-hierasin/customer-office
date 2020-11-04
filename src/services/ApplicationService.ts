@@ -1,4 +1,4 @@
-import {IDestination, IServiceListItem, IVisaGroup} from '../store/retail/interfaces';
+import {IDestination, IServiceListItem, IShipment, IVisaGroup, ShipmentTypesEnum} from '../store/retail/interfaces';
 
 export default class ApplicationService {
 
@@ -43,6 +43,20 @@ export default class ApplicationService {
 
     getTotal(): string {
         return `${this.application.total.toFixed(2)} ${this.application.currency.code}`
+    }
+
+    getShippingLabel(shippingType: ShipmentTypesEnum, shippingList: IShipment[]) {
+        let label = 'None'
+
+        const shipping = shippingList.find((shipping) => {
+            return shipping.type === shippingType
+        })
+
+        if (shipping) {
+            label = shipping.shipment_name
+        }
+
+        return label
     }
 
 }

@@ -1,21 +1,22 @@
 import React from 'react';
-import {DropdownButton, Dropdown} from 'react-bootstrap';
-import {IDestination, IServiceListItem, IVisaGroup} from '../../store/retail/interfaces';
+import {Dropdown, DropdownButton} from 'react-bootstrap';
+import {IDestination, IOrder, IServiceListItem, IVisaGroup, ShipmentTypesEnum} from '../../store/retail/interfaces';
 import ApplicationService from '../../services/ApplicationService';
 import {useSelector} from 'react-redux';
 import {RootState} from '../../store';
 import StatusesService from '../../services/StatusesService';
 import './index.scss'
+import ApplicationMenu from './ApplicationMenu/ApplicationMenu';
 
 
 interface IApplicationProps {
+    order: IOrder
     application: IServiceListItem
     visaGroups: IVisaGroup[]
     destinations: IDestination[]
-    paymentStatus: string
 }
 
-const Application = ({application, visaGroups, destinations, paymentStatus}: IApplicationProps) => {
+const Application = ({order, application, visaGroups, destinations}: IApplicationProps) => {
     const locale = useSelector((state: RootState) => state.app.initOptions.locale)
     const applicationService = new ApplicationService(application)
     const createdDate = applicationService.getCreatedDate(locale)
@@ -49,20 +50,10 @@ const Application = ({application, visaGroups, destinations, paymentStatus}: IAp
                 </div>
                 <div className="col-md col-lg-2">
                     <div data-test="price">{applicationService.getTotal()}</div>
-                    <div>{paymentStatus}</div>
+                    <div>{order.status}</div>
                 </div>
                 <div className="pr-2 context-dropdown-wrapper">
-                    <DropdownButton drop="left" title={
-                        <svg width="1em" height="1em" viewBox="0 0 16 16" className="bi bi-three-dots-vertical mb-1"
-                             fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                            <path fillRule="evenodd"
-                                  d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
-                        </svg>
-                    }>
-                        <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                        <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                        <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-                    </DropdownButton>
+                    <ApplicationMenu order={order} applicationService={applicationService}/>
                 </div>
             </div>
         </div>

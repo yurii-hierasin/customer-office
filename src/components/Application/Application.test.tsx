@@ -19,10 +19,10 @@ mockUseSelector.mockReturnValue('en')
 const application = order.service_list[0]
 const setUp = (serviceListItem: IServiceListItem = application): ShallowWrapper => {
     return shallow(<Application
+        order={order}
         application={serviceListItem}
         visaGroups={visaGroups}
         destinations={destinations}
-        paymentStatus={order.status}
     />)
 }
 

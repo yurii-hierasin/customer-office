@@ -15,10 +15,10 @@ const Orders = () => {
         <div data-test="orders-list">
             {orders.map(order => order.service_list.map(application => {
                 return <Application
+                    order={order}
                     application={application}
                     visaGroups={visaGroups}
                     destinations={destinations}
-                    paymentStatus={order.status}
                     key={application.id}
                 />
             }))}
