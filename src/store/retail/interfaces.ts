@@ -45,7 +45,7 @@ export interface IServiceListItem {
             docs_count: null
             validity: null
         }
-        fields: []
+        fields: ICostField[]
     }
     service: IService
     service_item: IServiceItem
@@ -55,65 +55,58 @@ export interface IServiceListItem {
     conclusion_url: string | null
 }
 
+export interface ICostField {
+    id: string
+    value: number
+    label: string
+    currency: ICurrency
+    fieldCost: number
+    fieldTax: number
+    total: number
+    taxed: boolean
+    zero_hidden: boolean
+}
+
+export interface IPriceField {
+    id: number
+    label: string
+    is_taxed: boolean
+    zero_hidden: boolean
+}
+
 export interface IService {
-    id: number;
+    id: number
     label: string
     keys: string[]
-    key_questions: {
-        entrydate: Array<string>
-    };
-    status: string;
-    agent_id: number;
-    meta_info: {
-        received_date?: string;
-        prepared_date?: string;
-        problems_date?: string;
-        cancelled_date?: string;
-        submitted_date?: string;
-        completed_date?: string;
-        denied_date?: string;
-        pickup_date?: string,
-        refund_reason?: string,
-        send_refund_reason?: boolean
-    };
-    service: {
-        id: number,
-        label: string
-    };
     prices: {
-        keys: any,
-        fields: any
-    };
-    service_item: IServiceItem;
-    currency: {
-        code: string
-    };
-    tax_rate: number;
-    total: number;
+        keys: string[]
+        fields: IPriceField[]
+    },
+    identifier: string
 }
 
 export interface IServiceItem {
-    id: number;
-    visa_group?: number;
-    destination?: string;
-    residency?: string;
-    citizenship?: string;
-    language?: string;
-    name?: string;
-    price: Array<any>;
+    id: number
+    visa_group?: number
+    destination?: string
+    residency?: string
+    citizenship?: string
+    language?: string
+    name?: string
+    prices: Array<any>
 }
 
 export interface IShipment {
-    id: number;
+    id: number
     order_id: number
     currency: ICurrency
-    type: ShipmentTypesEnum;
-    status: string;
-    shipment_name: string;
+    type: string
+    status: string
+    shipment_name: string
     from_client: boolean
-    recipient: IShipmentAddress | null;
-    sender: IShipmentAddress | null;
-    total: number;
+    recipient: IShipmentAddress | null
+    sender: IShipmentAddress | null
+    total: number
     default_prices: boolean
     service_name: string
     additional_options: string | null
@@ -121,26 +114,27 @@ export interface IShipment {
 
 export enum ShipmentTypesEnum {
     outbound = 'outbound',
-    inbound = 'inbound'
+    inbound = 'inbound',
+    local = 'local'
 }
 
 export interface IShipmentAddress {
-    street: string;
-    province: IProvince;
-    postal_code: string;
-    country: ICountry;
-    contact_name: string;
+    street: string
+    province: IProvince
+    postal_code: string
+    country: ICountry
+    contact_name: string
 }
 
 export interface IProvince {
-    state: string;
-    label: string;
-    residency: string;
+    state: string
+    label: string
+    residency: string
 }
 
 export interface ICountry {
-    label: string;
-    alpha2: string;
+    label: string
+    alpha2: string
 }
 
 export interface ICurrency {
@@ -166,4 +160,14 @@ export interface IDestination {
 
 export interface ICitizenship extends IDestination {
 
+}
+
+export interface IDocument {
+    id: number
+    date: string
+    name: string
+    author: string
+    url: string
+    tags: Array<string>
+    shipping_id?: number
 }
