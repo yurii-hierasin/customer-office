@@ -28,7 +28,6 @@ export function* watchRequestSingUp(api: IApi) {
 }
 
 export function* watchRequestSignIn(api: IApi) {
-    // @ts-ignore
     yield takeEvery(SIGN_IN_REQUEST, requestSignInWorker, api)
 }
 
@@ -63,7 +62,6 @@ function* requestSignUpWorker(action: ISignUpRequest) {
 }
 
 function* requestSignInWorker(api: IApi, action: ISignInRequest) {
-    console.log('api', api, action)
     try {
         yield put(startAction(action.type))
         const response = yield call([authAPI, authAPI.login], action.data)
