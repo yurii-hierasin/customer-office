@@ -31,6 +31,10 @@ describe('Application Service', () => {
         expect(applicationService.getTotal()).toBe('554.00 USD')
     })
 
+    test('.getApplication', () => {
+        expect(applicationService.getApplication()).toEqual(order.service_list[0])
+    })
+
     test('.getShippingLabel is None', () => {
         expect(applicationService.getShippingLabel(ShipmentTypesEnum.outbound, order.shipping_list))
             .toBe('None')

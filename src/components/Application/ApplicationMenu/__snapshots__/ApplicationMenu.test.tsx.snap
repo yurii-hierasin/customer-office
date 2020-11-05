@@ -13,7 +13,9 @@ exports[`ApplicationMenu component should render 1`] = `
 >
   <DropdownItem
     as="button"
+    data-test="edit-btn"
     disabled={false}
+    onClick={[Function]}
   >
     <img
       alt="Edit application"
@@ -28,7 +30,9 @@ exports[`ApplicationMenu component should render 1`] = `
   </DropdownItem>
   <DropdownItem
     as="button"
+    data-test="file-btn"
     disabled={false}
+    onClick={[Function]}
   >
     <img
       alt="Upload|Download files"

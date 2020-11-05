@@ -37,4 +37,16 @@ describe('ApplicationMenu component', () => {
             .toBe('None')
     })
 
+    test('file management component appear after onClick', () => {
+        expect(wrapper.find('FilesModal').length).toBe(0)
+        findByTestAttr(wrapper, 'file-btn').simulate('click')
+        expect(wrapper.find('FilesModal').length).toBe(1)
+    })
+
+    test('edit component appear after onClick', () => {
+        expect(wrapper.find('ApplicationEditModal').length).toBe(0)
+        findByTestAttr(wrapper, 'edit-btn').simulate('click')
+        expect(wrapper.find('ApplicationEditModal').length).toBe(1)
+    })
+
 })

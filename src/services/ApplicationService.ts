@@ -7,6 +7,10 @@ export default class ApplicationService {
     ) {
     }
 
+    getApplication(): IServiceListItem {
+        return this.application
+    }
+
     getCreatedDate(locale: string): string {
         const options = { year: 'numeric', month: 'short', day: 'numeric' }
 

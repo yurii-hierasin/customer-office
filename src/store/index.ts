@@ -3,6 +3,7 @@ import createSagaMiddleware from 'redux-saga';
 import {all} from 'redux-saga/effects';
 
 import retailReducer from './retail/reducers'
+import docsReducer from './docs/reducers';
 import appReducer from './app/reducers';
 import authReducer from './auth/reduces';
 import uiReducer from './ui/reducers';
@@ -15,11 +16,13 @@ import {
 } from './retail/sagas';
 import {watchTranslationsRequest} from './app/sagas';
 import {watchRequestForgotPass, watchRequestProfile, watchRequestSignIn, watchRequestSingUp} from './auth/sagas';
+import {watchRequestOrderDocs, watchRequestOrderServiceItemDocs} from './docs/sagas';
 import {IApi} from '../interfaces/app';
 
 
 export const rootReducer = combineReducers({
     retail: retailReducer,
+    docs: docsReducer,
     app: appReducer,
     auth: authReducer,
     ui: uiReducer,
@@ -37,6 +40,8 @@ function* rootSaga(api: IApi) {
         watchRequestVisaGroups(api),
         watchRequestDestinations(api),
         watchRequestCitizenships(api),
+        watchRequestOrderDocs(api),
+        watchRequestOrderServiceItemDocs(api),
         watchTranslationsRequest(api)
     ])
 }
