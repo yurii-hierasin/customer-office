@@ -1,14 +1,16 @@
-import {call, put, takeEvery} from 'redux-saga/effects';
+import {call, put, takeEvery, all} from 'redux-saga/effects';
 import {IApi, SnackbarRole} from '../../interfaces/app';
 import {
+    ALL_DOCS_REQUEST, IAllDocsRequestAction,
     IOrderDocsRequestAction,
     IOrderServiceItemDocsRequestAction,
     ORDER_DOCS_REQUEST, ORDER_SERVICE_ITEM_DOCS_REQUEST
 } from './types';
 import {retailAPI} from '../../api/retailAPI';
 import {IDocument} from '../retail/interfaces';
-import {responseOrderDocs, responseOrderServiceItemDocs} from './actions';
+import {responseAllDocs, responseOrderDocs, responseOrderServiceItemDocs} from './actions';
 import {openSnackbar} from '../app/actions';
+import {startAction, stopAction} from '../ui/actions';
 
 
 export function* watchRequestOrderDocs(api: IApi) {
@@ -37,5 +39,26 @@ function* requestOrderServiceItemDocsWorker(api: IApi, action: IOrderServiceItem
         yield put(responseOrderServiceItemDocs(docs))
     } catch (e) {
         yield put(openSnackbar(e.message, {role: SnackbarRole.ERROR, delay: 0}))
+    }
+}
+
+
+export function* watchRequestAllDocs(api: IApi) {
+    yield takeEvery(ALL_DOCS_REQUEST, requestAllDocsWorker, api)
+}
+
+// @ts-ignore
+function* requestAllDocsWorker(api: IApi, action: IAllDocsRequestAction) {
+    try {
+        yield put(startAction(action.type))
+        const [orderDocs, orderServiceItemDocs] = yield all([
+            call([retailAPI, retailAPI.fetchOrderDocs], action.payload.order),
+            call([retailAPI, retailAPI.fetchOrderServiceItemDocs], action.payload.orderServiceItem)
+        ])
+        yield put(responseAllDocs(orderDocs.data, orderServiceItemDocs.data))
+    } catch (e) {
+        yield put(openSnackbar(e.message, {role: SnackbarRole.ERROR, delay: 0}))
+    } finally {
+        yield put(stopAction(action.type))
     }
 }

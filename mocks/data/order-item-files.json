@@ -1,25 +1,10 @@
 [
   {
-    "id": 48,
-    "date": "2017-09-07T15:06:08.252+00:00",
-    "name": "pdf-test_doc.pdf",
-    "author": "Han Solo",
-    "url": "http://localhost:3031/pdf-test.pdf",
-    "tags": [
-      "evisa",
-      "financial",
-      "applicants-docs",
-      "identity"
-    ]
-  },
-  {
-    "id": 49,
-    "date": "2017-09-07T15:06:08.252+00:00",
-    "name": "pdf-test_doc2.pdf",
-    "author": "Han Solo",
-    "url": "http://localhost:3031/pdf-test2.pdf",
-    "tags": [
-      "conclusion"
-    ]
+    "id": 79167,
+    "date": "2020-11-05T19:19:47.078+00:00",
+    "name": "photo.jpg",
+    "author": "John Doe",
+    "url": "http:\/\/localhost:3031\/v0\/orders\/19948\/services\/32467\/downloads\/79167?token=aVY0hkHAtG8nO0VE",
+    "tags": []
   }
 ]

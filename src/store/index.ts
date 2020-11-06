@@ -16,7 +16,7 @@ import {
 } from './retail/sagas';
 import {watchTranslationsRequest} from './app/sagas';
 import {watchRequestForgotPass, watchRequestProfile, watchRequestSignIn, watchRequestSingUp} from './auth/sagas';
-import {watchRequestOrderDocs, watchRequestOrderServiceItemDocs} from './docs/sagas';
+import {watchRequestAllDocs, watchRequestOrderDocs, watchRequestOrderServiceItemDocs} from './docs/sagas';
 import {IApi} from '../interfaces/app';
 
 
@@ -42,6 +42,7 @@ function* rootSaga(api: IApi) {
         watchRequestCitizenships(api),
         watchRequestOrderDocs(api),
         watchRequestOrderServiceItemDocs(api),
+        watchRequestAllDocs(api),
         watchTranslationsRequest(api)
     ])
 }

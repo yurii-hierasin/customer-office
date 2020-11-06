@@ -1,4 +1,6 @@
 import {
+    ALL_DOCS_REQUEST,
+    ALL_DOCS_RESPONSE,
     IDocsActionTypes,
     ORDER_DOCS_REQUEST,
     ORDER_DOCS_RESPONSE,
@@ -25,4 +27,20 @@ export const requestOrderServiceItemDocs = (orderServiceItem: IServiceListItem):
 export const responseOrderServiceItemDocs = (docs: IDocument[]): IDocsActionTypes => ({
     type: ORDER_SERVICE_ITEM_DOCS_RESPONSE,
     payload: docs
+})
+
+export const requestAllDocs = (order: IOrder, orderServiceItem: IServiceListItem): IDocsActionTypes => ({
+    type: ALL_DOCS_REQUEST,
+    payload: {
+        order,
+        orderServiceItem
+    }
+})
+
+export const responseAllDocs = (orderDocs: IDocument[], orderServiceItemDocs: IDocument[]): IDocsActionTypes => ({
+    type: ALL_DOCS_RESPONSE,
+    payload: {
+        orderDocs,
+        orderServiceItemDocs
+    }
 })

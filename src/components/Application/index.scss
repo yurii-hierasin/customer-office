@@ -1,23 +1,7 @@
 .context-dropdown-wrapper {
 
-    .dropleft .dropdown-toggle::before {
-        display: none;
-    }
-
     .dropdown-menu {
         min-width: 18rem;
-    }
-
-    button.dropdown-toggle {
-        background-color: transparent;
-        border: none;
-        color: inherit;
-        border-radius: 50%;
-        padding: 6px 10px;
-    }
-
-    button:hover {
-        background-color: #ececec;
     }
 
 }
