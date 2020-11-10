@@ -4,6 +4,10 @@ export default class DateTimeService {
     ) {
     }
 
+    getLocale(): string {
+        return this.locale
+    }
+
     getDate(date: string) {
         const options = { year: 'numeric', month: 'short', day: 'numeric' }
 

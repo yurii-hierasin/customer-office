@@ -1,87 +1,94 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ApplicationMenu component should render 1`] = `
-<DropdownButton
-  drop="left"
-  title={
-    <img
-      alt="menu"
-      className="mb-1"
-      src="TreeDotsVertical.svg"
-    />
-  }
+<Dropdown
+  navbar={false}
 >
-  <DropdownItem
-    as="button"
-    data-test="edit-btn"
-    disabled={false}
-    onClick={[Function]}
-  >
-    <img
-      alt="Edit application"
-      src="Edit.svg"
-    />
-    <span
-      className="pl-1"
-      data-test="edit"
-    >
-      Edit
-    </span>
-  </DropdownItem>
-  <DropdownItem
-    as="button"
-    data-test="file-btn"
-    disabled={false}
-    onClick={[Function]}
-  >
-    <img
-      alt="Upload|Download files"
-      src="Upload.svg"
-    />
-    <span
-      className="pl-1"
-      data-test="file"
-    >
-      File
-    </span>
-  </DropdownItem>
-  <DropdownDivider
-    role="separator"
+  <DropdownToggle
+    as={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "render": [Function],
+      }
+    }
   />
-  <DropdownItemText>
-    <p>
-      Service details:
-    </p>
-    <p>
-      <span>
-        Order: 
-      </span>
+  <DropdownMenu
+    align="left"
+    alignRight={false}
+    flip={true}
+  >
+    <DropdownItem
+      as="button"
+      data-test="edit-btn"
+      disabled={false}
+      onClick={[Function]}
+    >
+      <img
+        alt="Edit application"
+        src="Edit.svg"
+      />
       <span
-        data-test="order-number"
+        className="pl-1"
+        data-test="edit"
       >
-        US288669
+        Edit
       </span>
-    </p>
-    <p>
-      <span>
-        Inbound shipping: 
-      </span>
+    </DropdownItem>
+    <DropdownItem
+      as="button"
+      data-test="file-btn"
+      disabled={false}
+      onClick={[Function]}
+    >
+      <img
+        alt="Upload|Download files"
+        src="Upload.svg"
+      />
       <span
-        data-test="shipping-inbound-label"
+        className="pl-1"
+        data-test="file"
       >
-        None
+        File
       </span>
-    </p>
-    <p>
-      <span>
-        Return shipping: 
-      </span>
-      <span
-        data-test="shipping-return-label"
-      >
-        None
-      </span>
-    </p>
-  </DropdownItemText>
-</DropdownButton>
+    </DropdownItem>
+    <DropdownDivider
+      role="separator"
+    />
+    <DropdownItemText>
+      <p>
+        Service details:
+      </p>
+      <p>
+        <span>
+          Order: 
+        </span>
+        <span
+          data-test="order-number"
+        >
+          US288669
+        </span>
+      </p>
+      <p>
+        <span>
+          Inbound shipping: 
+        </span>
+        <span
+          data-test="shipping-inbound-label"
+        >
+          None
+        </span>
+      </p>
+      <p>
+        <span>
+          Return shipping: 
+        </span>
+        <span
+          data-test="shipping-return-label"
+        >
+          None
+        </span>
+      </p>
+    </DropdownItemText>
+  </DropdownMenu>
+</Dropdown>
 `;

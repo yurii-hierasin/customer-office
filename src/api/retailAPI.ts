@@ -57,11 +57,11 @@ export default class RetailAPI extends BaseAPI {
         return this.axios.get(`orders/${orderId}/services/${orderItemId}/emails/${document.id}`);
     }
 
-    public add(orderId: string, orderItemId: number, document: any, config = {}) {
+    public add(orderId: number, orderItemId: number, document: any, config = {}) {
         return this.axios.post(`orders/${orderId}/services/${orderItemId}/files`, document, config);
     }
 
-    public deleteOrderItemDocument(orderId: string, orderItemId: number, document: IDocument) {
+    public deleteOrderItemDocument(orderId: number, orderItemId: number, document: IDocument) {
         return this.axios.delete(`orders/${orderId}/services/${orderItemId}/files/${document.id}`);
     }
 

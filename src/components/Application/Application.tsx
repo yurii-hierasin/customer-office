@@ -33,7 +33,7 @@ const Application = ({order, application, visaGroups, destinations}: IApplicatio
     }
 
     return (
-        <div className="card mt-3 p-2">
+        <div className="card mt-2 p-2">
             <div className="row">
                 <div data-test="date" className="col-md">{createdDate}</div>
                 <div data-test="desc" className="col-md col-lg-3">{description}</div>

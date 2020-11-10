@@ -12,4 +12,15 @@ export default class DocumentsService {
     })
   }
 
+  simulateDownloadEachDoc(allDocs: IDocument[]) {
+    const link = document.createElement('a');
+
+    for (const file of allDocs) {
+      link.setAttribute('href', file.url);
+      link.setAttribute('download', file.name);
+      link.setAttribute('target', '_blank');
+      link.click();
+    }
+  }
+
 }

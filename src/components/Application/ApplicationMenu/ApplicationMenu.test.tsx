@@ -38,9 +38,9 @@ describe('ApplicationMenu component', () => {
     })
 
     test('file management component appear after onClick', () => {
-        expect(wrapper.find('FilesModal').length).toBe(0)
+        expect(wrapper.find('DocsModal').length).toBe(0)
         findByTestAttr(wrapper, 'file-btn').simulate('click')
-        expect(wrapper.find('FilesModal').length).toBe(1)
+        expect(wrapper.find('DocsModal').length).toBe(1)
     })
 
     test('edit component appear after onClick', () => {

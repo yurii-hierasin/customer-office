@@ -118,6 +118,11 @@ export enum ShipmentTypesEnum {
     local = 'local'
 }
 
+export enum DocTypesEnum {
+    default = 'default',
+    uploaded = 'uploaded'
+}
+
 export interface IShipmentAddress {
     street: string
     province: IProvince

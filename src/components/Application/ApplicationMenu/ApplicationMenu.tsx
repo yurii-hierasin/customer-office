@@ -4,9 +4,10 @@ import editIcon from '../../../icons/Edit.svg';
 import {Dropdown} from 'react-bootstrap';
 import {IOrder, ShipmentTypesEnum} from '../../../store/retail/interfaces';
 import ApplicationService from '../../../services/ApplicationService';
-import FilesModal from '../../FilesModal/FilesModal';
+import DocsModal from '../../docs-modal/DocsModal';
 import ApplicationEditModal from '../../ApplicationEditModal/ApplicationEditModal';
 import TreeDotsToggle from '../../TreeDotsToggle';
+import DocumentsService from '../../../services/documents.service';
 
 
 interface IApplicationMenuProps {
@@ -15,11 +16,11 @@ interface IApplicationMenuProps {
 }
 
 const ApplicationMenu = ({order, applicationService}: IApplicationMenuProps) => {
-    const [showFilesModal, setFilesModalShow] = useState(false);
+    const [showDocsModal, setDocsModalShow] = useState(false);
     const [showEditModal, setEditModalShow] = useState(false);
 
-    const handleFilesModalClose = () => setFilesModalShow(false);
-    const handleFilesModalShow = () => setFilesModalShow(true);
+    const handleFilesModalClose = () => setDocsModalShow(false);
+    const handleFilesModalShow = () => setDocsModalShow(true);
 
     const handleApplicationEditModalClose = () => setEditModalShow(false);
     const handleApplicationEditModalShow = () => setEditModalShow(true);
@@ -65,12 +66,14 @@ const ApplicationMenu = ({order, applicationService}: IApplicationMenuProps) => 
                     </p>
                 </Dropdown.ItemText>
 
-                {showFilesModal && <FilesModal
-                    order={order}
-                    orderServiceItem={applicationService.getApplication()}
-                    show={showFilesModal}
-                    handleClose={handleFilesModalClose}
-                />}
+                {showDocsModal && (
+                    <DocsModal
+                        order={order}
+                        orderServiceItem={applicationService.getApplication()}
+                        handleClose={handleFilesModalClose}
+                        documentsService={new DocumentsService()}
+                    />
+                )}
 
                 {showEditModal && <ApplicationEditModal
                     show={showEditModal}
