@@ -119,7 +119,12 @@ const DocsModal: React.FC<Props> = ({order, orderServiceItem, handleClose, docum
                                 )}
 
                                 {documentsService.getByType(allDocs, docType).map(doc => (
-                                    <DocsItem orderServiceItem={orderServiceItem} doc={doc} key={doc.id}/>
+                                    <DocsItem
+                                        isDeletingAllowed={docType === DocTypesEnum.uploaded}
+                                        orderServiceItem={orderServiceItem}
+                                        doc={doc}
+                                        key={doc.id}
+                                    />
                                 ))}
                             </div>
                         )

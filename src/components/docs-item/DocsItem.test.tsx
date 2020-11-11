@@ -1,6 +1,6 @@
 import React from 'react';
 import {useDocsItem} from './hooks'
-import {shallow} from 'enzyme';
+import {shallow, ShallowWrapper} from 'enzyme';
 import DocsItem from './DocsItem';
 import docs from '../../../mocks/data/order-item-files.json';
 import order from '../../../mocks/data/order.json';
@@ -22,15 +22,35 @@ mockUseDocsItem.mockReturnValue({
     handleModalAgree: mockHandleModalAgree,
 })
 
+const setUp = (isDeletingAllowed: boolean = true): ShallowWrapper => {
+    return shallow(<DocsItem
+        doc={doc}
+        orderServiceItem={orderServiceItem}
+        isDeletingAllowed={isDeletingAllowed}
+    />)
+}
 
 describe('DocsItem component', () => {
 
-    test('handlerDelete called', () => {
-        const wrapper = shallow(<DocsItem doc={doc} orderServiceItem={orderServiceItem} />)
+    let wrapper: ShallowWrapper
 
+    beforeEach(() => wrapper = setUp())
+
+    test('handlerDelete called', () => {
         findByTestAttr(wrapper, 'delete-btn').simulate('click')
 
         expect(mockHandleDelete).toBeCalled()
     })
+
+    test('delete btn not available for default docs', () => {
+        wrapper = setUp(false)
+        expect(findByTestAttr(wrapper, 'delete-btn').length).toBe(0)
+    })
+
+    test('delete btn available for uploaded docs', () => {
+        expect(findByTestAttr(wrapper, 'delete-btn').length).toBe(1)
+    })
+
+
 
 })

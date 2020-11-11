@@ -11,9 +11,10 @@ import {useDocsItem} from './hooks';
 type Props = {
     doc: IDocument
     orderServiceItem: IServiceListItem
+    isDeletingAllowed: boolean
 }
 
-const DocsItem: React.FC<Props> = ({doc, orderServiceItem}) => {
+const DocsItem: React.FC<Props> = ({doc, orderServiceItem, isDeletingAllowed}) => {
     const {
         showModal,
         dateTimeService,
@@ -42,14 +43,16 @@ const DocsItem: React.FC<Props> = ({doc, orderServiceItem}) => {
                                          className="mb-1"/>
                                     <span className="pl-1">Download</span>
                                 </Dropdown.Item>
-                                <Dropdown.Item
-                                    as="button"
-                                    onClick={handleDelete}
-                                    data-test="delete-btn"
-                                >
-                                    <img src={trashIcon} alt="Delete" className="mb-1"/>
-                                    <span className="pl-1">Delete</span>
-                                </Dropdown.Item>
+                                {isDeletingAllowed && (
+                                    <Dropdown.Item
+                                        as="button"
+                                        onClick={handleDelete}
+                                        data-test="delete-btn"
+                                    >
+                                        <img src={trashIcon} alt="Delete" className="mb-1"/>
+                                        <span className="pl-1">Delete</span>
+                                    </Dropdown.Item>
+                                )}
                             </Dropdown.Menu>
                         </Dropdown>
                     </div>
