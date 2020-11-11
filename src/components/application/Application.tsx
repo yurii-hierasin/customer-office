@@ -5,7 +5,7 @@ import {useSelector} from 'react-redux';
 import {RootState} from '../../store';
 import StatusesService from '../../services/StatusesService';
 import './index.scss'
-import ApplicationMenu from './ApplicationMenu/ApplicationMenu';
+import ApplicationMenu from './application-menu/ApplicationMenu';
 
 
 interface IApplicationProps {

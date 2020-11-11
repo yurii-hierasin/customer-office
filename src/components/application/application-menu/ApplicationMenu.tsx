@@ -5,7 +5,7 @@ import {Dropdown} from 'react-bootstrap';
 import {IOrder, ShipmentTypesEnum} from '../../../store/retail/interfaces';
 import ApplicationService from '../../../services/ApplicationService';
 import DocsModal from '../../docs-modal/DocsModal';
-import ApplicationEditModal from '../../ApplicationEditModal/ApplicationEditModal';
+import ApplicationEditModal from '../../application-edit-modal/ApplicationEditModal';
 import TreeDotsToggle from '../../TreeDotsToggle';
 import DocumentsService from '../../../services/documents.service';
 

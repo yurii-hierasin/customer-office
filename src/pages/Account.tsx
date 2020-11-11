@@ -5,7 +5,7 @@ import {useL10n} from '../hooks/useL10n';
 import {RootState} from '../store';
 import {ChangePasswordForm} from '../components/auth/ChangePasswordForm';
 import ProfileDetailsForm from '../components/auth/ProfileDetailsForm';
-import EmailNotificationsForm from '../components/EmailNotificationsForm/EmailNotificationsForm';
+import EmailNotificationsForm from '../components/email-notifications-form/EmailNotificationsForm';
 import {requestProfile} from '../store/auth/actions';
 
 const Account: React.FC = () => {

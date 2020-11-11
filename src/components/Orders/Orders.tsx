@@ -1,6 +1,6 @@
 import React from 'react';
 import {useOrders} from '../../hooks/useOrders';
-import Application from '../Application/Application';
+import Application from '../application/Application';
 import {useDestinations} from '../../hooks/useDestinations';
 import {useCitizenships} from '../../hooks/useCitizenships';
 import {useVisaGroups} from '../../hooks/useVisaGroups';
